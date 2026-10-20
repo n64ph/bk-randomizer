@@ -1,0 +1,216 @@
+{
+ "_doc": "Política e correções aplicadas sobre logic/lighthouse_raw.json por tools/compile_logic.py. Cada correção tem motivo; revise docs/logic-audit.md antes de mudar.",
+ "start_region": "SPIRAL_MOUNTAIN_ENTRANCE",
+ "goal_event": "GAME_COMPLETE",
+ "starting_moves": [
+  "BEAK_BARGE",
+  "CAMERA_CONTROL",
+  "CLAW_SWIPE",
+  "CLIMB",
+  "DIVE",
+  "FEATHERY_FLAP",
+  "FLAP_FLIP",
+  "HIGH_JUMP",
+  "RATATAT_RAP",
+  "ROLL"
+ ],
+ "location_types": [
+  "JIGGY",
+  "HONEYCOMB",
+  "TOKEN",
+  "MOLEHILL"
+ ],
+ "excluded_checks": [
+  "RC_SM_MOLEHILL_ATTACK",
+  "RC_SM_MOLEHILL_BEAK_BARGE",
+  "RC_SM_MOLEHILL_CAMERA_CONTROL",
+  "RC_SM_MOLEHILL_CLIMB",
+  "RC_SM_MOLEHILL_DIVE",
+  "RC_SM_MOLEHILL_JUMP"
+ ],
+ "token_uid_overrides": {
+  "_motivo": "IDs efetivos no Banjo: Recompiled com bkrecomp_set_mumbo_token_fixes_enabled(TRUE) (patches/mumbo_token_patches.c).",
+  "RC_MMM_MUMBO_TOKEN_INSIDE_LOGGO": 116,
+  "RC_CCW_MUMBO_TOKEN_SPRING_THORN_FIELD_FRONT_OF_MUMBOS_SKULL": 93,
+  "RC_CCW_MUMBO_TOKEN_SPRING_FRONT_OF_EYRIE": 94
+ },
+ "molehill_index": {
+  "_motivo": "Índice em moleTable (src/core2/ch/mole.c) = actorTypeSpecificField - 9.",
+  "RC_FP_MOLEHILL_BEAK_BOMB": 0,
+  "RC_MM_MOLEHILL_USE_EGGS": 1,
+  "RC_MM_MOLEHILL_BEAK_BUSTER": 2,
+  "RC_MM_MOLEHILL_TALON_TROT": 3,
+  "RC_TTC_MOLEHILL_SHOCK_JUMP": 4,
+  "RC_TTC_MOLEHILL_FLIGHT": 5,
+  "RC_CC_MOLEHILL_WONDERWING": 6,
+  "RC_BGS_MOLEHILL_WADING_BOOTS": 7,
+  "RC_GV_MOLEHILL_TURBO_TALON": 8
+ },
+ "duplicate_check_renames": {
+  "_motivo": "Lighthouse c09a1f1 lista RC_BGS_NOTE_THIRD_SHORT_SWAMP_LOG_2 duas vezes e omite _3; a segunda ocorrência vira _3.",
+  "RC_BGS_NOTE_THIRD_SHORT_SWAMP_LOG_2": "RC_BGS_NOTE_THIRD_SHORT_SWAMP_LOG_3"
+ },
+ "check_rule_patches": {
+  "_motivo": "Correções de regra encontradas na auditoria.",
+  "RC_BGS_JIGGY_JINJO": "jinjos(BGS)"
+ },
+ "extra_events": [
+  {
+   "_motivo": "Lighthouse c09a1f1 não define este evento; o interruptor fica no quarto do interruptor dentro do Clanker (mapa 0x21, acesso pelo blowhole).",
+   "region": "CLANKERS_CAVERN_INTERIOR_CLANKER_SLOW_SAWBLADE",
+   "event": "WITCH_SWITCH_CLANKERS_CAVERN",
+   "rule": "has(BEAK_BUSTER)"
+  },
+  {
+   "_motivo": "Lighthouse c09a1f1 não define este evento; o interruptor fica no alto da igreja (mapa 0x1C).",
+   "region": "MAD_MONSTER_MANSION_CHURCH_INTERIOR_RAFTERS",
+   "event": "WITCH_SWITCH_MAD_MONSTER_MANSION",
+   "rule": "has(BEAK_BUSTER)"
+  },
+  {
+   "_motivo": "Lighthouse c09a1f1 não define este evento; o interruptor fica no tronco da árvore no inverno.",
+   "region": "CLICK_CLOCK_WOOD_WINTER_UPPER_TREE",
+   "event": "WITCH_SWITCH_CLICK_CLOCK_WOOD",
+   "rule": "has(BEAK_BUSTER)"
+  }
+ ],
+ "extra_exits": [
+  {
+   "_motivo": "Lighthouse c09a1f1 não tem entrada para esta região (Jinjo verde de CC); o Archipelago-BK exige só nadar.",
+   "from": "CLANKERS_CAVERN_NEAR_CLANKER",
+   "to": "CLANKERS_CAVERN_UNDERWATER_LOCK",
+   "rule": "has(DIVE)"
+  },
+  {
+   "_motivo": "Lighthouse c09a1f1 não tem entrada para a tumba de Sandybutt; o Archipelago-BK exige ovos a partir da área superior.",
+   "from": "GOBIS_VALLEY_UPPER_AREA",
+   "to": "GOBIS_VALLEY_INTERIOR_MAZE_PYRAMID",
+   "rule": "has(EGGS)"
+  }
+ ],
+ "worlds": {
+  "NONE": 0,
+  "MM": 1,
+  "TTC": 2,
+  "CC": 3,
+  "BGS": 4,
+  "FP": 5,
+  "LAIR": 6,
+  "GV": 7,
+  "CCW": 8,
+  "RBB": 9,
+  "MMM": 10,
+  "SM": 11
+ },
+ "moves": {
+  "BEAK_BARGE": 0,
+  "BEAK_BOMB": 1,
+  "BEAK_BUSTER": 2,
+  "CAMERA_CONTROL": 3,
+  "CLAW_SWIPE": 4,
+  "CLIMB": 5,
+  "EGGS": 6,
+  "FEATHERY_FLAP": 7,
+  "FLAP_FLIP": 8,
+  "FLIGHT": 9,
+  "HIGH_JUMP": 10,
+  "RATATAT_RAP": 11,
+  "ROLL": 12,
+  "SHOCK_JUMP": 13,
+  "WADING_BOOTS": 14,
+  "DIVE": 15,
+  "TALON_TROT": 16,
+  "TURBO_TALON": 17,
+  "WONDERWING": 18,
+  "NOTE_DOORS": 19
+ },
+ "puzzle_slots": {
+  "_motivo": "Ordem de PICTURE_INFO (src/lair/jigsawpicture.c). NÃO derive do level_e: MMM e CCW trocariam de custo.",
+  "MM": 0,
+  "TTC": 1,
+  "CC": 2,
+  "BGS": 3,
+  "FP": 4,
+  "GV": 5,
+  "MMM": 6,
+  "RBB": 7,
+  "CCW": 8,
+  "LAIR": 9
+ },
+ "puzzle_events": {
+  "MM": "PUZZLE_BOARD_MUMBOS_MOUNTAIN",
+  "TTC": "PUZZLE_BOARD_TREASURE_TROVE_COVE",
+  "CC": "PUZZLE_BOARD_CLANKERS_CAVERN",
+  "BGS": "PUZZLE_BOARD_BUBBLEGLOOP_SWAMP",
+  "FP": "PUZZLE_BOARD_FREEZEEZY_PEAK",
+  "GV": "PUZZLE_BOARD_GOBIS_VALLEY",
+  "MMM": "PUZZLE_BOARD_MAD_MONSTER_MANSION",
+  "RBB": "PUZZLE_BOARD_RUSTY_BUCKET_BAY",
+  "CCW": "PUZZLE_BOARD_CLICK_CLOCK_WOOD",
+  "LAIR": "PUZZLE_BOARD_GRUNTILDA"
+ },
+ "note_doors": [
+  50,
+  180,
+  260,
+  350,
+  450,
+  640,
+  765,
+  810,
+  828,
+  846,
+  864,
+  882
+ ],
+ "transformations": {
+  "TERMITE": {
+   "id": 2,
+   "skulls": [
+    "MUMBOS_MOUNTAIN_INTERIOR_MUMBOS_SKULL"
+   ]
+  },
+  "CROC": {
+   "id": 5,
+   "skulls": [
+    "BUBBLEGLOOP_SWAMP_INTERIOR_MUMBOS_SKULL"
+   ]
+  },
+  "WALRUS": {
+   "id": 4,
+   "skulls": [
+    "FREEZEEZY_PEAK_INTERIOR_MUMBOS_SKULL"
+   ]
+  },
+  "PUMPKIN": {
+   "id": 3,
+   "skulls": [
+    "MAD_MONSTER_MANSION_INTERIOR_MUMBOS_SKULL"
+   ]
+  },
+  "BEE": {
+   "id": 6,
+   "skulls": [
+    "CLICK_CLOCK_WOOD_SPRING_INTERIOR_MUMBOS_SKULL",
+    "CLICK_CLOCK_WOOD_SUMMER_INTERIOR_MUMBOS_SKULL",
+    "CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_MUMBOS_SKULL"
+   ]
+  }
+ },
+ "helpers": {
+  "_motivo": "Equivalentes a CAN_ATTACK, CAN_EXTEND_JUMP_DISTANCE, CanBreakObject e CanKillEnemy (Lighthouse Logic.h).",
+  "can_attack": "has(RATATAT_RAP) or has(CLAW_SWIPE) or has(EGGS) or has(BEAK_BUSTER) or has(ROLL) or has(WONDERWING) or has(BEAK_BARGE)",
+  "extend_jump": "has(FEATHERY_FLAP) or has(RATATAT_RAP) or has(TALON_TROT)",
+  "break(BOULDER)": "has(BEAK_BARGE) or has(EGGS) or has(BEAK_BUSTER) or has(WONDERWING)",
+  "break(BRICK_WALL)": "has(BEAK_BARGE) or has(WONDERWING) or has(RATATAT_RAP) or has(EGGS)",
+  "break(CELLAR_CASK)": "has(BEAK_BARGE) or has(WONDERWING) or has(RATATAT_RAP) or has(EGGS)",
+  "break(WOODEN_DOOR)": "has(BEAK_BARGE) or has(WONDERWING) or has(RATATAT_RAP) or has(EGGS)",
+  "break(GNAWTYS_BOULDER)": "has(BEAK_BARGE) or has(BEAK_BUSTER) or has(EGGS) or has(WONDERWING)",
+  "break(GRATE)": "has(EGGS) or has(RATATAT_RAP)",
+  "break(IRON_GATE)": "has(BEAK_BARGE) or has(WONDERWING) or has(RATATAT_RAP)",
+  "break(WEB)": "has(EGGS)",
+  "break(WINDOWS)": "has(EGGS) or has(WONDERWING) or has(RATATAT_RAP)",
+  "kill(SIR_SLUSH)": "has(BEAK_BOMB) and has(FLIGHT)",
+  "kill(ZUBBA)": "has(BEAK_BARGE) or has(WONDERWING) or has(RATATAT_RAP)"
+ }
+}

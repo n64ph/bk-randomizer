@@ -1,0 +1,25 @@
+{
+ "defines": {
+  "BKR_REGION_COUNT": 125,
+  "BKR_LOCATION_COUNT": 249,
+  "BKR_EXIT_COUNT": 243,
+  "BKR_EVENT_COUNT": 104,
+  "BKR_EVENT_DEF_COUNT": 105,
+  "BKR_NOTE_GROUP_COUNT": 118,
+  "BKR_RULE_CODE_SIZE": 1769,
+  "BKR_START_REGION": 116,
+  "BKR_GOAL_EVENT": 10
+ },
+ "max_rule_depth": 8,
+ "ignored_checks": {
+  "STOP_N_SWOP": 7,
+  "MOLEHILL": 6
+ },
+ "data_hash": "0x5C82A342",
+ "locations_by_kind": {
+  "JIGGY": 100,
+  "HONEYCOMB": 24,
+  "TOKEN": 116,
+  "MOLEHILL": 9
+ }
+}

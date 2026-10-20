@@ -1,0 +1,1488 @@
+/* Arquivo gerado por tools/compile_logic.py — NÃO EDITE À MÃO. */
+#include "bkr/bkr_world.h"
+
+const BkrRegionDef bkr_regions[BKR_REGION_COUNT] = {
+    {0, 4, 0, 16, 0, 6, 0, 11, 4, 0}, /* BUBBLEGLOOP_SWAMP */
+    {4, 1, 16, 2, 6, 0, 11, 1, 4, 0}, /* BUBBLEGLOOP_SWAMP_INTERIOR_MR_VILES */
+    {5, 1, 18, 2, 6, 0, 12, 0, 4, 0}, /* BUBBLEGLOOP_SWAMP_INTERIOR_MUMBOS_SKULL */
+    {6, 1, 20, 3, 6, 0, 12, 1, 4, 0}, /* BUBBLEGLOOP_SWAMP_INTERIOR_TANKTUP */
+    {7, 3, 23, 1, 6, 0, 13, 0, 3, 0}, /* CLANKERS_CAVERN_ENTRANCE */
+    {10, 2, 24, 1, 6, 1, 13, 2, 3, 0}, /* CLANKERS_CAVERN_ENTRANCE_UPPER */
+    {12, 2, 25, 0, 7, 0, 15, 1, 3, 0}, /* CLANKERS_CAVERN_ENTRANCE_UNDERWATER */
+    {14, 2, 25, 3, 7, 1, 16, 1, 3, 0}, /* CLANKERS_CAVERN_INTERIOR_CLANKER */
+    {16, 1, 28, 2, 8, 0, 17, 2, 3, 0}, /* CLANKERS_CAVERN_INTERIOR_CLANKER_FAST_SAWBLADE */
+    {17, 1, 30, 1, 8, 1, 19, 1, 3, 0}, /* CLANKERS_CAVERN_INTERIOR_CLANKER_SLOW_SAWBLADE */
+    {18, 4, 31, 8, 9, 1, 20, 2, 3, 0}, /* CLANKERS_CAVERN_NEAR_CLANKER */
+    {22, 1, 39, 2, 10, 1, 22, 1, 3, 0}, /* CLANKERS_CAVERN_NEAR_CLANKER_UPPER */
+    {23, 1, 41, 0, 11, 1, 23, 1, 3, 0}, /* CLANKERS_CAVERN_UNDERWATER_LOCK */
+    {24, 3, 41, 6, 12, 1, 24, 3, 8, 0}, /* CLICK_CLOCK_WOOD_AUTUMN */
+    {27, 1, 47, 0, 13, 0, 27, 1, 8, 0}, /* CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_BEEHIVE */
+    {28, 1, 47, 0, 13, 0, 28, 1, 8, 0}, /* CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_MUMBOS_SKULL */
+    {29, 1, 47, 0, 13, 0, 29, 1, 8, 0}, /* CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_NABNUTS_HOUSE */
+    {30, 1, 47, 0, 13, 0, 30, 0, 8, 0}, /* CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_NABNUTS_WINDOW */
+    {31, 1, 47, 0, 13, 0, 30, 0, 8, 0}, /* CLICK_CLOCK_WOOD_AUTUMN_TOP_ROOM */
+    {32, 3, 47, 2, 13, 1, 30, 1, 8, 0}, /* CLICK_CLOCK_WOOD_AUTUMN_UPPER_TREE */
+    {35, 5, 49, 1, 14, 1, 31, 1, 8, 0}, /* CLICK_CLOCK_WOOD_ENTRANCE */
+    {40, 4, 50, 5, 15, 0, 32, 2, 8, 0}, /* CLICK_CLOCK_WOOD_SPRING */
+    {44, 1, 55, 0, 15, 1, 34, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SPRING_INTERIOR_BEEHIVE */
+    {45, 1, 55, 0, 16, 0, 34, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SPRING_INTERIOR_MUMBOS_SKULL */
+    {46, 1, 55, 1, 16, 0, 34, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SPRING_INTERIOR_NABNUTS_HOUSE */
+    {47, 1, 56, 1, 16, 0, 34, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SPRING_TOP_ROOM */
+    {48, 3, 57, 3, 16, 2, 34, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SPRING_UPPER_TREE */
+    {51, 3, 60, 6, 18, 3, 34, 3, 8, 0}, /* CLICK_CLOCK_WOOD_SUMMER */
+    {54, 1, 66, 1, 21, 0, 37, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SUMMER_INTERIOR_BEEHIVE */
+    {55, 1, 67, 1, 21, 0, 37, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SUMMER_INTERIOR_MUMBOS_SKULL */
+    {56, 1, 68, 0, 21, 0, 37, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SUMMER_INTERIOR_NABNUTS_HOUSE */
+    {57, 1, 68, 0, 21, 0, 37, 0, 8, 0}, /* CLICK_CLOCK_WOOD_SUMMER_TOP_ROOM */
+    {58, 3, 68, 2, 21, 0, 37, 1, 8, 0}, /* CLICK_CLOCK_WOOD_SUMMER_UPPER_TREE */
+    {61, 1, 70, 5, 21, 1, 38, 1, 8, 0}, /* CLICK_CLOCK_WOOD_WINTER */
+    {62, 1, 75, 0, 22, 0, 39, 0, 8, 0}, /* CLICK_CLOCK_WOOD_WINTER_INTERIOR_MUMBOS_SKULL */
+    {63, 1, 75, 0, 22, 0, 39, 0, 8, 0}, /* CLICK_CLOCK_WOOD_WINTER_INTERIOR_NABNUTS_HOUSE */
+    {64, 1, 75, 0, 22, 0, 39, 0, 8, 0}, /* CLICK_CLOCK_WOOD_WINTER_INTERIOR_NABNUTS_WINDOW */
+    {65, 1, 75, 1, 22, 0, 39, 0, 8, 0}, /* CLICK_CLOCK_WOOD_WINTER_INTERIOR_WINDOW_ABOVE_NABNUT */
+    {66, 1, 76, 0, 22, 0, 39, 0, 8, 0}, /* CLICK_CLOCK_WOOD_WINTER_TOP_ROOM */
+    {67, 5, 76, 2, 22, 1, 39, 3, 8, 0}, /* CLICK_CLOCK_WOOD_WINTER_UPPER_TREE */
+    {72, 3, 78, 2, 23, 0, 42, 1, 5, 0}, /* FREEZEEZY_PEAK_ENTRANCE */
+    {75, 1, 80, 2, 23, 0, 43, 0, 5, 0}, /* FREEZEEZY_PEAK_INTERIOR_BOGGYS_IGLOO */
+    {76, 1, 82, 0, 23, 1, 43, 1, 5, 0}, /* FREEZEEZY_PEAK_INTERIOR_MUMBOS_SKULL */
+    {77, 1, 82, 1, 24, 1, 44, 0, 5, 0}, /* FREEZEEZY_PEAK_INTERIOR_WOZZAS_CAVE */
+    {78, 5, 83, 14, 25, 3, 44, 2, 5, 0}, /* FREEZEEZY_PEAK_MAIN_LOWER */
+    {83, 1, 97, 3, 28, 1, 46, 2, 5, 0}, /* FREEZEEZY_PEAK_MAIN_UPPER */
+    {84, 1, 100, 1, 29, 0, 48, 1, 5, 0}, /* FREEZEEZY_PEAK_POTTED_TREE */
+    {85, 2, 101, 4, 29, 2, 49, 3, 7, 0}, /* GOBIS_VALLEY_ENTRANCE */
+    {87, 1, 105, 2, 31, 0, 52, 1, 7, 0}, /* GOBIS_VALLEY_INTERIOR_MATCH_GAME_PYRAMID */
+    {88, 1, 107, 2, 31, 2, 53, 1, 7, 0}, /* GOBIS_VALLEY_INTERIOR_MAZE_PYRAMID */
+    {89, 1, 109, 2, 33, 0, 54, 1, 7, 0}, /* GOBIS_VALLEY_INTERIOR_RUBEES_PYRAMID */
+    {90, 1, 111, 2, 33, 1, 55, 3, 7, 0}, /* GOBIS_VALLEY_INTERIOR_SPHYNX */
+    {91, 1, 113, 2, 34, 1, 58, 1, 7, 0}, /* GOBIS_VALLEY_INTERIOR_WATER_PYRAMID */
+    {92, 1, 115, 0, 35, 0, 59, 0, 7, 0}, /* GOBIS_VALLEY_SECRET_CHAMBER */
+    {93, 7, 115, 9, 35, 1, 59, 3, 7, 0}, /* GOBIS_VALLEY_UPPER_AREA */
+    {100, 5, 124, 1, 36, 2, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_BEFORE_NOTE_DOOR_180 */
+    {105, 3, 125, 1, 38, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_BEFORE_NOTE_DOOR_260 */
+    {108, 3, 126, 2, 39, 2, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_BEFORE_NOTE_DOOR_640 */
+    {111, 0, 128, 0, 41, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_BOSS_GRUNTILDA */
+    {111, 2, 128, 0, 42, 7, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_FINAL_ROOM */
+    {113, 2, 128, 0, 49, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_FURNACE_FUN */
+    {115, 2, 128, 2, 50, 2, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_LOBBY */
+    {117, 2, 130, 0, 52, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_BUBBLEGLOOP_SWAMP */
+    {119, 2, 130, 1, 53, 4, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_CLANKERS_CAVERN */
+    {121, 2, 131, 1, 57, 3, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_CLICK_CLOCK_WOOD */
+    {123, 4, 132, 3, 60, 5, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_FREEZEEZY_PEAK */
+    {127, 3, 135, 2, 65, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_GOBIS_VALLEY */
+    {130, 3, 137, 1, 66, 2, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_RUSTY_BUCKET_BAY */
+    {133, 3, 138, 0, 68, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_MAD_MONSTER_MANSION */
+    {136, 2, 138, 1, 69, 0, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ENTRANCE_TREASURE_TROVE_COVE */
+    {138, 1, 139, 1, 69, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_ORANGE_CAULDRON_1 */
+    {139, 2, 140, 0, 70, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_PUZZLE_BOARD_GOBIS_VALLEY */
+    {141, 2, 140, 1, 71, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_PUZZLE_BOARD_MAD_MONSTER_MANSION */
+    {143, 2, 141, 0, 72, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_NEAR_PUZZLE_BOARD_RUSTY_BUCKET_BAY */
+    {145, 2, 141, 2, 73, 3, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_PAST_NOTE_DOOR_50 */
+    {147, 1, 143, 1, 76, 1, 62, 0, 6, 0}, /* GRUNTILDAS_LAIR_WATER_SWITCH_1_ROOM */
+    {148, 1, 144, 1, 77, 0, 62, 1, 10, 0}, /* MAD_MONSTER_MANSION_CHURCH_CLOCK_TOWER */
+    {149, 4, 145, 3, 77, 0, 63, 1, 10, 0}, /* MAD_MONSTER_MANSION_CHURCH_EXTERIOR */
+    {153, 2, 148, 1, 77, 0, 64, 2, 10, 0}, /* MAD_MONSTER_MANSION_CHURCH_INTERIOR */
+    {155, 2, 149, 1, 77, 0, 66, 1, 10, 0}, /* MAD_MONSTER_MANSION_CHURCH_INTERIOR_UPPER_ORGAN */
+    {157, 2, 150, 2, 77, 1, 67, 0, 10, 0}, /* MAD_MONSTER_MANSION_CHURCH_INTERIOR_RAFTERS */
+    {159, 1, 152, 0, 78, 0, 67, 0, 10, 0}, /* MAD_MONSTER_MANSION_CHURCH_INTERIOR_WINDOW */
+    {160, 14, 152, 7, 78, 3, 67, 5, 10, 0}, /* MAD_MONSTER_MANSION_ENTRANCE */
+    {174, 1, 159, 1, 81, 0, 72, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_BARREL */
+    {175, 2, 160, 1, 81, 0, 73, 0, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_BATHROOM */
+    {177, 1, 161, 1, 81, 1, 73, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_BEDROOM */
+    {178, 1, 162, 2, 82, 1, 74, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_CELLAR */
+    {179, 1, 164, 2, 83, 0, 75, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_DINING_ROOM */
+    {180, 1, 166, 2, 83, 0, 76, 0, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_INSIDE_LOGGO */
+    {181, 1, 168, 0, 83, 0, 76, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_MUMBOS_SKULL */
+    {182, 1, 168, 1, 83, 0, 77, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_TUMBLARS_SHED */
+    {183, 1, 169, 2, 83, 0, 78, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_WELL */
+    {184, 1, 171, 0, 83, 0, 79, 0, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_WINDOW_BOTTOM_NORTH */
+    {185, 1, 171, 0, 83, 0, 79, 0, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_WINDOW_BOTTOM_SOUTH */
+    {186, 1, 171, 1, 83, 0, 79, 0, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_WINDOW_MIDDLE_WEST */
+    {187, 1, 172, 0, 83, 0, 79, 1, 10, 0}, /* MAD_MONSTER_MANSION_INTERIOR_WINDOW_TOP_ATTIC */
+    {188, 3, 172, 18, 83, 6, 80, 3, 1, 0}, /* MUMBOS_MOUNTAIN_ENTRANCE */
+    {191, 2, 190, 1, 89, 0, 83, 1, 1, 0}, /* MUMBOS_MOUNTAIN_INTERIOR_TICKERS_TOWER */
+    {193, 1, 191, 0, 89, 0, 84, 1, 1, 0}, /* MUMBOS_MOUNTAIN_INTERIOR_MUMBOS_SKULL */
+    {194, 2, 191, 1, 89, 0, 85, 0, 1, 0}, /* MUMBOS_MOUNTAIN_TICKERS_TOWER_TOP */
+    {196, 16, 192, 12, 89, 5, 85, 8, 9, 0}, /* RUSTY_BUCKET_BAY_ENTRANCE */
+    {212, 1, 204, 0, 94, 1, 93, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_ANCHOR */
+    {213, 1, 204, 1, 95, 0, 94, 0, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_BOAT_HOUSE */
+    {214, 1, 205, 1, 95, 0, 94, 0, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_BOSS_BOOM_BOX_ROOM */
+    {215, 1, 206, 1, 95, 0, 94, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_BUNK_CABIN */
+    {216, 1, 207, 1, 95, 0, 95, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_CAPTAINS_CABIN */
+    {217, 1, 208, 0, 95, 1, 96, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_ENGINE_ROOM_BEHIND_GLASS */
+    {218, 1, 208, 5, 96, 1, 97, 2, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_ENGINE_ROOM_MAIN */
+    {219, 1, 213, 1, 97, 0, 99, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_KITCHEN */
+    {220, 1, 214, 1, 97, 0, 100, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_NAVIGATION_ROOM */
+    {221, 1, 215, 1, 97, 0, 101, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_SHIPPING_CONTAINER_FIRST */
+    {222, 1, 216, 1, 97, 1, 102, 0, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_SHIPPING_CONTAINER_SECOND */
+    {223, 1, 217, 0, 98, 0, 102, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_SHIPPING_CONTAINER_THIRD */
+    {224, 1, 217, 1, 98, 0, 103, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_TNT_ROOM */
+    {225, 1, 218, 0, 98, 0, 104, 1, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_WAREHOUSE_LOWER */
+    {226, 1, 218, 1, 98, 0, 105, 0, 9, 0}, /* RUSTY_BUCKET_BAY_INTERIOR_WAREHOUSE_UPPER */
+    {227, 1, 219, 6, 98, 0, 105, 0, 11, 0}, /* SPIRAL_MOUNTAIN_ENTRANCE */
+    {228, 7, 225, 19, 98, 5, 105, 7, 2, 0}, /* TREASURE_TROVE_COVE_ENTRANCE */
+    {235, 1, 244, 1, 103, 0, 112, 1, 2, 0}, /* TREASURE_TROVE_COVE_INTERIOR_NIPPER */
+    {236, 1, 245, 1, 103, 0, 113, 1, 2, 0}, /* TREASURE_TROVE_COVE_INTERIOR_SANDCASTLE */
+    {237, 1, 246, 0, 103, 0, 114, 1, 2, 0}, /* TREASURE_TROVE_COVE_INTERIOR_SHIP_LOWER */
+    {238, 1, 246, 1, 103, 0, 115, 1, 2, 0}, /* TREASURE_TROVE_COVE_INTERIOR_SHIP_UPPER */
+    {239, 2, 247, 1, 103, 1, 116, 1, 2, 0}, /* TREASURE_TROVE_COVE_LIGHTHOUSE_BASE */
+    {241, 1, 248, 1, 104, 1, 117, 1, 2, 0}, /* TREASURE_TROVE_COVE_LIGHTHOUSE_TOP */
+    {242, 1, 249, 0, 105, 0, 118, 0, 2, 0}, /* TREASURE_TROVE_COVE_SHARKFOOD_ISLAND */
+};
+
+const BkrExitDef bkr_exits[BKR_EXIT_COUNT] = {
+    {1, 0},
+    {2, 6},
+    {3, 9},
+    {62, 12},
+    {0, 12},
+    {0, 12},
+    {0, 12},
+    {5, 260},
+    {6, 266},
+    {63, 12},
+    {4, 12},
+    {6, 266},
+    {4, 12},
+    {10, 12},
+    {10, 12},
+    {8, 293},
+    {7, 12},
+    {7, 12},
+    {6, 12},
+    {11, 311},
+    {9, 12},
+    {12, 266},
+    {10, 12},
+    {10, 12},
+    {14, 173},
+    {15, 386},
+    {19, 12},
+    {13, 257},
+    {13, 6},
+    {19, 12},
+    {19, 12},
+    {19, 12},
+    {13, 12},
+    {16, 12},
+    {18, 404},
+    {21, 434},
+    {27, 437},
+    {13, 440},
+    {33, 443},
+    {64, 12},
+    {20, 12},
+    {22, 461},
+    {23, 6},
+    {26, 473},
+    {21, 12},
+    {21, 536},
+    {26, 12},
+    {26, 12},
+    {21, 12},
+    {24, 12},
+    {25, 404},
+    {29, 173},
+    {28, 587},
+    {32, 593},
+    {27, 257},
+    {27, 707},
+    {32, 12},
+    {32, 12},
+    {27, 12},
+    {30, 12},
+    {31, 404},
+    {39, 12},
+    {33, 12},
+    {39, 12},
+    {39, 12},
+    {39, 12},
+    {39, 12},
+    {33, 12},
+    {35, 722},
+    {36, 722},
+    {37, 716},
+    {38, 257},
+    {41, 12},
+    {44, 12},
+    {65, 12},
+    {40, 12},
+    {44, 755},
+    {44, 12},
+    {40, 764},
+    {45, 764},
+    {42, 293},
+    {46, 236},
+    {43, 773},
+    {44, 12},
+    {44, 12},
+    {54, 836},
+    {66, 12},
+    {54, 12},
+    {54, 12},
+    {54, 12},
+    {54, 12},
+    {54, 266},
+    {54, 12},
+    {47, 12},
+    {48, 9},
+    {50, 902},
+    {51, 908},
+    {52, 914},
+    {53, 12},
+    {49, 887},
+    {56, 926},
+    {69, 12},
+    {63, 257},
+    {70, 12},
+    {74, 12},
+    {55, 12},
+    {62, 12},
+    {66, 932},
+    {65, 12},
+    {67, 266},
+    {64, 950},
+    {58, 983},
+    {60, 12},
+    {59, 12},
+    {64, 12},
+    {74, 1004},
+    {96, 1010},
+    {0, 1025},
+    {56, 12},
+    {4, 1040},
+    {55, 12},
+    {20, 1082},
+    {60, 1088},
+    {40, 1115},
+    {57, 1121},
+    {66, 173},
+    {71, 1127},
+    {47, 1184},
+    {56, 12},
+    {65, 12},
+    {56, 266},
+    {72, 266},
+    {100, 1214},
+    {71, 12},
+    {75, 1253},
+    {82, 1268},
+    {117, 1274},
+    {55, 236},
+    {55, 12},
+    {65, 12},
+    {68, 12},
+    {67, 266},
+    {73, 1286},
+    {67, 12},
+    {72, 1295},
+    {55, 12},
+    {61, 12},
+    {68, 12},
+    {77, 12},
+    {82, 698},
+    {78, 1310},
+    {76, 173},
+    {81, 12},
+    {77, 12},
+    {79, 1319},
+    {78, 12},
+    {80, 293},
+    {78, 12},
+    {79, 12},
+    {77, 12},
+    {68, 12},
+    {83, 1328},
+    {84, 1334},
+    {85, 1352},
+    {86, 1367},
+    {77, 698},
+    {87, 1379},
+    {89, 1397},
+    {90, 1367},
+    {91, 12},
+    {92, 722},
+    {93, 722},
+    {94, 1334},
+    {95, 1352},
+    {82, 12},
+    {82, 12},
+    {88, 1328},
+    {82, 12},
+    {82, 12},
+    {82, 12},
+    {84, 12},
+    {82, 257},
+    {82, 12},
+    {82, 1412},
+    {82, 12},
+    {82, 12},
+    {82, 12},
+    {82, 12},
+    {61, 12},
+    {97, 12},
+    {98, 12},
+    {96, 12},
+    {99, 1481},
+    {96, 12},
+    {96, 12},
+    {97, 12},
+    {67, 12},
+    {101, 266},
+    {102, 266},
+    {103, 1499},
+    {104, 1514},
+    {105, 1514},
+    {106, 12},
+    {107, 365},
+    {108, 12},
+    {109, 1514},
+    {110, 1517},
+    {111, 1517},
+    {112, 1517},
+    {113, 12},
+    {114, 12},
+    {115, 587},
+    {100, 266},
+    {100, 266},
+    {100, 236},
+    {100, 12},
+    {100, 12},
+    {100, 236},
+    {100, 236},
+    {100, 12},
+    {100, 12},
+    {100, 12},
+    {100, 1460},
+    {100, 12},
+    {100, 12},
+    {100, 12},
+    {100, 12},
+    {61, 12},
+    {69, 12},
+    {122, 293},
+    {119, 1673},
+    {120, 266},
+    {121, 9},
+    {118, 1679},
+    {124, 12},
+    {117, 12},
+    {117, 12},
+    {117, 266},
+    {117, 257},
+    {117, 12},
+    {123, 1748},
+    {122, 12},
+    {117, 12},
+};
+
+const BkrLocDef bkr_locations[BKR_LOCATION_COUNT] = {
+    {0, 155, 34, 1, 4, 1, 0}, /* 0: RC_BGS_JIGGY_CROCTUS */
+    {0, 173, 32, 1, 4, 1, 0}, /* 1: RC_BGS_JIGGY_ELEVATED_WALKWAY */
+    {0, 176, 36, 1, 4, 1, 0}, /* 2: RC_BGS_JIGGY_FLIBBITS */
+    {0, 68, 35, 1, 4, 1, 0}, /* 3: RC_BGS_JIGGY_HUTS */
+    {0, 203, 31, 1, 4, 1, 0}, /* 4: RC_BGS_JIGGY_JINJO */
+    {0, 218, 37, 1, 4, 1, 0}, /* 5: RC_BGS_JIGGY_MAZE */
+    {0, 224, 33, 1, 4, 1, 0}, /* 6: RC_BGS_JIGGY_PINKEGG */
+    {0, 9, 38, 1, 4, 1, 0}, /* 7: RC_BGS_JIGGY_TANKTUP */
+    {0, 12, 7, 4, 4, 46, 0}, /* 8: RC_BGS_MOLEHILL_WADING_BOOTS */
+    {0, 35, 27, 3, 4, 3, 0}, /* 9: RC_BGS_MUMBO_TOKEN_ALCOVE_ABOVE_YELLOW_FLIBBITS */
+    {0, 74, 26, 3, 4, 3, 0}, /* 10: RC_BGS_MUMBO_TOKEN_BEHIND_MUMBOS_SKULL */
+    {0, 44, 24, 3, 4, 3, 0}, /* 11: RC_BGS_MUMBO_TOKEN_BEHIND_YELLOW_JINJO */
+    {0, 68, 25, 3, 4, 3, 0}, /* 12: RC_BGS_MUMBO_TOKEN_FLOATING_BETWEEN_HUT_AND_CROCTUS */
+    {0, 236, 23, 3, 4, 3, 0}, /* 13: RC_BGS_MUMBO_TOKEN_TOP_OF_POLE_NEXT_TO_BIG_EGG */
+    {0, 0, 21, 3, 4, 3, 0}, /* 14: RC_BGS_MUMBO_TOKEN_UNDER_HUT_1 */
+    {0, 0, 22, 3, 4, 3, 0}, /* 15: RC_BGS_MUMBO_TOKEN_UNDER_HUT_2 */
+    {1, 239, 40, 1, 4, 1, 0}, /* 16: RC_BGS_JIGGY_MR_VILE */
+    {1, 12, 29, 3, 4, 3, 0}, /* 17: RC_BGS_MUMBO_TOKEN_INSIDE_MR_VILES */
+    {2, 248, 7, 2, 4, 2, 0}, /* 18: RC_BGS_EMPTY_HONEYCOMB_MUMBOS */
+    {2, 12, 30, 3, 4, 3, 0}, /* 19: RC_BGS_MUMBO_TOKEN_INSIDE_MUMBOS_SKULL */
+    {3, 257, 8, 2, 4, 2, 0}, /* 20: RC_BGS_EMPTY_HONEYCOMB_TANKTUP */
+    {3, 9, 39, 1, 4, 1, 0}, /* 21: RC_BGS_JIGGY_TIPTUP */
+    {3, 12, 28, 3, 4, 3, 0}, /* 22: RC_BGS_MUMBO_TOKEN_BEHIND_TIPTUP */
+    {4, 269, 21, 1, 3, 1, 0}, /* 23: RC_CC_JIGGY_JINJO */
+    {5, 284, 17, 3, 3, 3, 0}, /* 24: RC_CC_MUMBO_TOKEN_ABOVE_LEVEL_ENTRANCE */
+    {7, 296, 28, 1, 3, 1, 0}, /* 25: RC_CC_JIGGY_RINGS */
+    {7, 12, 27, 1, 3, 1, 0}, /* 26: RC_CC_JIGGY_TOOTH */
+    {7, 12, 20, 3, 3, 3, 0}, /* 27: RC_CC_MUMBO_TOKEN_CLANKERS_LEFT_TOOTH */
+    {8, 308, 30, 1, 3, 1, 0}, /* 28: RC_CC_JIGGY_FAST_SAWBLADES */
+    {8, 12, 6, 4, 3, 50, 0}, /* 29: RC_CC_MOLEHILL_WONDERWING */
+    {9, 12, 29, 1, 3, 1, 0}, /* 30: RC_CC_JIGGY_SLOW_SAWBLADES */
+    {10, 12, 5, 2, 3, 2, 0}, /* 31: RC_CC_EMPTY_HONEYCOMB_UNDERWATER */
+    {10, 257, 24, 1, 3, 1, 0}, /* 32: RC_CC_JIGGY_BOLT */
+    {10, 12, 23, 1, 3, 1, 0}, /* 33: RC_CC_JIGGY_CLANKER_RAISED */
+    {10, 12, 26, 1, 3, 1, 0}, /* 34: RC_CC_JIGGY_LONG_PIPE */
+    {10, 320, 25, 1, 3, 1, 0}, /* 35: RC_CC_JIGGY_TAIL */
+    {10, 335, 22, 1, 3, 1, 0}, /* 36: RC_CC_JIGGY_SNIPPETS */
+    {10, 12, 16, 3, 3, 3, 0}, /* 37: RC_CC_MUMBO_TOKEN_CHOMPA_BEHIND_CLANKERS_TAIL */
+    {10, 12, 18, 3, 3, 3, 0}, /* 38: RC_CC_MUMBO_TOKEN_TUNNEL_RIGHT_OF_CLANKER */
+    {11, 9, 6, 2, 3, 2, 0}, /* 39: RC_CC_EMPTY_HONEYCOMB_ABOVEWATER */
+    {11, 365, 19, 3, 3, 3, 0}, /* 40: RC_CC_MUMBO_TOKEN_ALCOVE_WITH_OPEN_GRATE */
+    {13, 12, 77, 1, 8, 1, 0}, /* 41: RC_CCW_JIGGY_FLOWER */
+    {13, 398, 75, 1, 8, 1, 0}, /* 42: RC_CCW_JIGGY_GNAWTY */
+    {13, 257, 106, 3, 8, 3, 0}, /* 43: RC_CCW_MUMBO_TOKEN_AUTUMN_FLOATING_ABOVE_BIG_CLUCKER */
+    {13, 12, 109, 3, 8, 3, 0}, /* 44: RC_CCW_MUMBO_TOKEN_AUTUMN_LEAF_NEAR_TREEHOUSE */
+    {13, 308, 107, 3, 8, 3, 0}, /* 45: RC_CCW_MUMBO_TOKEN_AUTUMN_SNAREBEAR_NEAR_ENTRANCE */
+    {13, 12, 110, 3, 8, 3, 0}, /* 46: RC_CCW_MUMBO_TOKEN_AUTUMN_TOP_OF_BRANCH */
+    {19, 419, 74, 1, 8, 1, 0}, /* 47: RC_CCW_JIGGY_NABNUT */
+    {19, 308, 108, 3, 8, 3, 0}, /* 48: RC_CCW_MUMBO_TOKEN_AUTUMN_SNAREBEAR_TOP_OF_TREE */
+    {20, 446, 71, 1, 8, 1, 0}, /* 49: RC_CCW_JIGGY_JINJO */
+    {21, 506, 95, 3, 8, 3, 0}, /* 50: RC_CCW_MUMBO_TOKEN_SPRING_SNAREBEAR_NEAR_BIG_FLOWER */
+    {21, 506, 96, 3, 8, 3, 0}, /* 51: RC_CCW_MUMBO_TOKEN_SPRING_SNAREBEAR_NEAR_ENTRANCE */
+    {21, 6, 93, 3, 8, 3, 0}, /* 52: RC_CCW_MUMBO_TOKEN_SPRING_THORN_FIELD_FRONT_OF_MUMBOS_SKULL */
+    {21, 521, 92, 3, 8, 3, 0}, /* 53: RC_CCW_MUMBO_TOKEN_SPRING_TOP_OF_BRANCH */
+    {21, 521, 97, 3, 8, 3, 0}, /* 54: RC_CCW_MUMBO_TOKEN_SPRING_TOP_OF_BEEHIVE */
+    {24, 12, 98, 3, 8, 3, 0}, /* 55: RC_CCW_MUMBO_TOKEN_SPRING_NABNUTS_HOUSE */
+    {25, 12, 80, 1, 8, 1, 0}, /* 56: RC_CCW_JIGGY_TOP_ROOM */
+    {26, 569, 79, 1, 8, 1, 0}, /* 57: RC_CCW_JIGGY_TREE_TOP */
+    {26, 12, 94, 3, 8, 3, 0}, /* 58: RC_CCW_MUMBO_TOKEN_SPRING_FRONT_OF_EYRIE */
+    {26, 12, 91, 3, 8, 3, 0}, /* 59: RC_CCW_MUMBO_TOKEN_SPRING_UNFINISHED_WOOD_TREEHOUSE */
+    {27, 647, 78, 1, 8, 1, 0}, /* 60: RC_CCW_JIGGY_SUMMER_LEAF_JUMPS */
+    {27, 12, 100, 3, 8, 3, 0}, /* 61: RC_CCW_MUMBO_TOKEN_SUMMER_BIG_FLOWER_FIELD */
+    {27, 644, 103, 3, 8, 3, 0}, /* 62: RC_CCW_MUMBO_TOKEN_SUMMER_ENTRANCE_GNAWTYS_HOUSE */
+    {27, 662, 104, 3, 8, 3, 0}, /* 63: RC_CCW_MUMBO_TOKEN_SUMMER_FLOATING_ABOVE_BIG_CLUCKER */
+    {27, 308, 101, 3, 8, 3, 0}, /* 64: RC_CCW_MUMBO_TOKEN_SUMMER_SNAREBEAR_NEAR_THORN_FIELD */
+    {27, 173, 102, 3, 8, 3, 0}, /* 65: RC_CCW_MUMBO_TOKEN_SUMMER_TOP_OF_BRANCH */
+    {28, 698, 76, 1, 8, 1, 0}, /* 66: RC_CCW_JIGGY_ZUBBAS */
+    {29, 12, 105, 3, 8, 3, 0}, /* 67: RC_CCW_MUMBO_TOKEN_SUMMER_INSIDE_MUMBOS_SKULL */
+    {32, 12, 72, 1, 8, 1, 0}, /* 68: RC_CCW_JIGGY_HOUSE */
+    {32, 12, 99, 3, 8, 3, 0}, /* 69: RC_CCW_MUMBO_TOKEN_SUMMER_PLATFORMS_BEFORE_EYRIES_NEST */
+    {33, 398, 13, 2, 8, 2, 0}, /* 70: RC_CCW_EMPTY_HONEYCOMB_GNAWTYS */
+    {33, 12, 111, 3, 8, 3, 0}, /* 71: RC_CCW_MUMBO_TOKEN_WINTER_BIG_FLOWER */
+    {33, 12, 113, 3, 8, 3, 0}, /* 72: RC_CCW_MUMBO_TOKEN_WINTER_BROKEN_BEEHIVE */
+    {33, 12, 112, 3, 8, 3, 0}, /* 73: RC_CCW_MUMBO_TOKEN_WINTER_FROZEN_RIVER_NEAR_FLIGHT_PAD */
+    {33, 716, 115, 3, 8, 3, 0}, /* 74: RC_CCW_MUMBO_TOKEN_WINTER_SIR_SLUSH_BETWEEN_BIG_FLOWER_AND_MUMBOS_SKULL */
+    {37, 296, 14, 2, 8, 2, 0}, /* 75: RC_CCW_EMPTY_HONEYCOMB_NABNUTS */
+    {39, 12, 73, 1, 8, 1, 0}, /* 76: RC_CCW_JIGGY_EYRIE */
+    {39, 12, 114, 3, 8, 3, 0}, /* 77: RC_CCW_MUMBO_TOKEN_WINTER_WALKWAY_FRONT_OF_NABNUTS_HOUSE */
+    {40, 731, 41, 1, 5, 1, 0}, /* 78: RC_FP_JIGGY_JINJO */
+    {40, 173, 42, 1, 5, 1, 0}, /* 79: RC_FP_JIGGY_SLED_TO_BOGGY */
+    {41, 12, 40, 3, 5, 3, 0}, /* 80: RC_FP_MUMBO_TOKEN_INSIDE_BOGGYS_IGLOO */
+    {41, 746, 46, 1, 5, 1, 0}, /* 81: RC_FP_JIGGY_IGLOO */
+    {43, 12, 9, 2, 5, 2, 0}, /* 82: RC_FP_EMPTY_HONEYCOMB_WOZZAS_CAVE */
+    {44, 716, 10, 2, 5, 2, 0}, /* 83: RC_FP_EMPTY_HONEYCOMB_UNDER_SIR_SLUSH */
+    {44, 788, 48, 1, 5, 1, 0}, /* 84: RC_FP_JIGGY_BOGGY_RACE_1 */
+    {44, 797, 44, 1, 5, 1, 0}, /* 85: RC_FP_JIGGY_BOGGY_RACE_2 */
+    {44, 716, 45, 1, 5, 1, 0}, /* 86: RC_FP_JIGGY_SNOWMANS_BUTTONS */
+    {44, 773, 50, 1, 5, 1, 0}, /* 87: RC_FP_JIGGY_WOZZA */
+    {44, 12, 0, 4, 5, 33, 0}, /* 88: RC_FP_MOLEHILL_BEAK_BOMB */
+    {44, 12, 37, 3, 5, 3, 0}, /* 89: RC_FP_MUMBO_TOKEN_POTTED_TREE */
+    {44, 12, 33, 3, 5, 3, 0}, /* 90: RC_FP_MUMBO_TOKEN_PRESENT_STACK */
+    {44, 716, 35, 3, 5, 3, 0}, /* 91: RC_FP_MUMBO_TOKEN_SIR_SLUSH_NEAR_RACE_START */
+    {44, 716, 36, 3, 5, 3, 0}, /* 92: RC_FP_MUMBO_TOKEN_SIR_SLUSH_NEAR_RACE_FINISH */
+    {44, 12, 31, 3, 5, 3, 0}, /* 93: RC_FP_MUMBO_TOKEN_SNOWMAN_LEFT_FOOT */
+    {44, 12, 32, 3, 5, 3, 0}, /* 94: RC_FP_MUMBO_TOKEN_SNOWMAN_RIGHT_FOOT */
+    {44, 293, 34, 3, 5, 3, 0}, /* 95: RC_FP_MUMBO_TOKEN_VILLAGE_CHIMNEY */
+    {44, 773, 39, 3, 5, 3, 0}, /* 96: RC_FP_MUMBO_TOKEN_WATER_BEHIND_SNOWMAN */
+    {45, 716, 49, 1, 5, 1, 0}, /* 97: RC_FP_JIGGY_BEAT_ALL_SIR_SLUSH */
+    {45, 821, 43, 1, 5, 1, 0}, /* 98: RC_FP_JIGGY_SNOWMANS_PIPE */
+    {45, 173, 38, 3, 5, 3, 0}, /* 99: RC_FP_MUMBO_TOKEN_SLED_TO_BOGGY */
+    {46, 827, 47, 1, 5, 1, 0}, /* 100: RC_FP_JIGGY_INSIDE_THE_TREE */
+    {47, 845, 12, 2, 7, 2, 0}, /* 101: RC_GV_EMPTY_HONEYCOMB_GOBI */
+    {47, 851, 69, 1, 7, 1, 0}, /* 102: RC_GV_JIGGY_GOBI_2 */
+    {47, 863, 61, 1, 7, 1, 0}, /* 103: RC_GV_JIGGY_JINJO */
+    {47, 12, 43, 3, 7, 3, 0}, /* 104: RC_GV_MUMBO_TOKEN_BOTTOM_OF_MOAT */
+    {48, 9, 64, 1, 7, 1, 0}, /* 105: RC_GV_JIGGY_MATCHING_GAME */
+    {48, 12, 46, 3, 7, 3, 0}, /* 106: RC_GV_MUMBO_TOKEN_INSIDE_MEMORY_GAME_ROOM */
+    {49, 12, 65, 1, 7, 1, 0}, /* 107: RC_GV_JIGGY_MAZE */
+    {49, 12, 47, 3, 7, 3, 0}, /* 108: RC_GV_MUMBO_TOKEN_BEHIND_SANDYBUTTS_SARCOPHAGUS */
+    {50, 878, 67, 1, 7, 1, 0}, /* 109: RC_GV_JIGGY_HISTUP */
+    {50, 12, 49, 3, 7, 3, 0}, /* 110: RC_GV_MUMBO_TOKEN_NEXT_TO_RUBEE */
+    {51, 887, 63, 1, 7, 1, 0}, /* 111: RC_GV_JIGGY_SHYINX */
+    {51, 12, 50, 3, 7, 3, 0}, /* 112: RC_GV_MUMBO_TOKEN_INSIDE_JINXY */
+    {52, 266, 66, 1, 7, 1, 0}, /* 113: RC_GV_JIGGY_WATER_PYRAMID */
+    {52, 12, 48, 3, 7, 3, 0}, /* 114: RC_GV_MUMBO_TOKEN_INSIDE_WATER_PYRAMID */
+    {54, 917, 11, 2, 7, 2, 0}, /* 115: RC_GV_EMPTY_HONEYCOMB_CACTUS */
+    {54, 845, 70, 1, 7, 1, 0}, /* 116: RC_GV_JIGGY_ANCIENT_ONES */
+    {54, 9, 68, 1, 7, 1, 0}, /* 117: RC_GV_JIGGY_GOBI_1 */
+    {54, 914, 62, 1, 7, 1, 0}, /* 118: RC_GV_JIGGY_GRABBA */
+    {54, 12, 8, 4, 7, 49, 0}, /* 119: RC_GV_MOLEHILL_TURBO_TALON */
+    {54, 12, 45, 3, 7, 3, 0}, /* 120: RC_GV_MUMBO_TOKEN_FRONT_OF_STAR_DOOR */
+    {54, 6, 42, 3, 7, 3, 0}, /* 121: RC_GV_MUMBO_TOKEN_SAND_RIGHT_OF_JINXY */
+    {54, 257, 41, 3, 7, 3, 0}, /* 122: RC_GV_MUMBO_TOKEN_TOP_OF_JINXYS_NOSE */
+    {54, 887, 44, 3, 7, 3, 0}, /* 123: RC_GV_MUMBO_TOKEN_TOP_OF_WATER_PYRAMID */
+    {55, 266, 82, 3, 6, 3, 0}, /* 124: RC_GL_MUMBO_TOKEN_CCW_JIGGY_PODIUM */
+    {56, 941, 55, 1, 6, 1, 0}, /* 125: RC_GL_JIGGY_WITCH_SWITCH_BUBBLEGLOOP_SWAMP */
+    {57, 977, 59, 1, 6, 1, 0}, /* 126: RC_GL_JIGGY_WITCH_SWITCH_RUSTY_BUCKET_BAY */
+    {57, 461, 88, 3, 6, 3, 0}, /* 127: RC_GL_MUMBO_TOKEN_ABOVE_NOTE_DOOR_WATER_AREA */
+    {61, 12, 51, 1, 6, 1, 0}, /* 128: RC_GL_JIGGY_LOBBY */
+    {61, 1016, 52, 1, 6, 1, 0}, /* 129: RC_GL_JIGGY_WITCH_SWITCH_MUMBOS_MOUNTAIN */
+    {63, 1067, 84, 3, 6, 3, 0}, /* 130: RC_GL_MUMBO_TOKEN_ABOVE_CC_ENTRANCE */
+    {64, 1100, 60, 1, 6, 1, 0}, /* 131: RC_GL_JIGGY_WITCH_SWITCH_CLICK_CLOCK_WOOD */
+    {65, 1139, 56, 1, 6, 1, 0}, /* 132: RC_GL_JIGGY_WITCH_SWITCH_FREEZEEZY_PEAK */
+    {65, 1148, 57, 1, 6, 1, 0}, /* 133: RC_GL_JIGGY_WITCH_SWITCH_MAD_MONSTER_MANSION */
+    {65, 1169, 86, 3, 6, 3, 0}, /* 134: RC_GL_MUMBO_TOKEN_ADVENT_TOP_WINDOW */
+    {66, 1205, 58, 1, 6, 1, 0}, /* 135: RC_GL_JIGGY_WITCH_SWITCH_GOBIS_VALLEY */
+    {66, 12, 85, 3, 6, 3, 0}, /* 136: RC_GL_MUMBO_TOKEN_BEHIND_SARCOPHAGUS */
+    {67, 266, 89, 3, 6, 3, 0}, /* 137: RC_GL_MUMBO_TOKEN_UNDERWATER_RBB_ENTRANCE_AREA */
+    {69, 1280, 54, 1, 6, 1, 0}, /* 138: RC_GL_JIGGY_WITCH_SWITCH_TREASURE_TROVE_COVE */
+    {70, 12, 83, 3, 6, 3, 0}, /* 139: RC_GL_MUMBO_TOKEN_TOP_OF_PIPE_IN_ORANGE_CAULDRON_ROOM */
+    {72, 284, 90, 3, 6, 3, 0}, /* 140: RC_GL_MUMBO_TOKEN_WHIPCRACK_NEAR_MMM_JIGGY_PODIUM */
+    {74, 1301, 53, 1, 6, 1, 0}, /* 141: RC_GL_JIGGY_WITCH_SWITCH_CLANKERS_CAVERN */
+    {74, 12, 81, 3, 6, 3, 0}, /* 142: RC_GL_MUMBO_TOKEN_BEHIND_PURPLE_CAULDRON */
+    {75, 12, 87, 3, 6, 3, 0}, /* 143: RC_GL_MUMBO_TOKEN_BEHIND_MUMBO_IN_CRYPT */
+    {76, 1304, 95, 1, 10, 1, 0}, /* 144: RC_MMM_JIGGY_CLOCKTOWER_TOP */
+    {77, 887, 99, 1, 10, 1, 0}, /* 145: RC_MMM_JIGGY_CEMETARY_POTS */
+    {77, 12, 56, 3, 10, 3, 0}, /* 146: RC_MMM_MUMBO_TOKEN_BEHIND_CHURCH */
+    {77, 173, 53, 3, 10, 3, 0}, /* 147: RC_MMM_MUMBO_TOKEN_ALCOVE_CLOCK_TOWER */
+    {78, 257, 59, 3, 10, 3, 0}, /* 148: RC_MMM_MUMBO_TOKEN_TOP_OF_STOOL_INSIDE_CHURCH */
+    {79, 9, 96, 1, 10, 1, 0}, /* 149: RC_MMM_JIGGY_MOTZAND */
+    {80, 12, 17, 2, 10, 2, 0}, /* 150: RC_MMM_EMPTY_HONEYCOMB_CHURCH_RAFTERS */
+    {80, 12, 58, 3, 10, 3, 0}, /* 151: RC_MMM_MUMBO_TOKEN_TOP_OF_RAFTER_INSIDE_CHURCH */
+    {82, 1421, 91, 1, 10, 1, 0}, /* 152: RC_MMM_JIGGY_JINJO */
+    {82, 12, 51, 3, 10, 3, 0}, /* 153: RC_MMM_MUMBO_TOKEN_HIDDEN_NEAR_FOUNTAIN */
+    {82, 12, 55, 3, 10, 3, 0}, /* 154: RC_MMM_MUMBO_TOKEN_IN_THE_MAZE */
+    {82, 887, 57, 3, 10, 3, 0}, /* 155: RC_MMM_MUMBO_TOKEN_INSIDE_WHIPCRACK_IN_FOUNTAIN */
+    {82, 12, 52, 3, 10, 3, 0}, /* 156: RC_MMM_MUMBO_TOKEN_NEAR_FRONT_TUMBLARS_SHED */
+    {82, 1328, 54, 3, 10, 3, 0}, /* 157: RC_MMM_MUMBO_TOKEN_NEXT_TO_MAZE_HEDGE_RAMP */
+    {82, 821, 60, 3, 10, 3, 0}, /* 158: RC_MMM_MUMBO_TOKEN_TOP_OF_TUMBLARS_SHED */
+    {83, 12, 97, 1, 10, 1, 0}, /* 159: RC_MMM_JIGGY_BARREL_INTERIOR */
+    {84, 12, 65, 3, 10, 3, 0}, /* 160: RC_MMM_MUMBO_TOKEN_IN_LOGGOS_ROOM */
+    {85, 12, 64, 3, 10, 3, 0}, /* 161: RC_MMM_MUMBO_TOKEN_INSIDE_BEDROOM */
+    {86, 1367, 94, 1, 10, 1, 0}, /* 162: RC_MMM_JIGGY_CELLAR */
+    {86, 1367, 61, 3, 10, 3, 0}, /* 163: RC_MMM_MUMBO_TOKEN_INSIDE_BARREL_IN_CELLAR */
+    {87, 707, 93, 1, 10, 1, 0}, /* 164: RC_MMM_JIGGY_MANSION_TABLE */
+    {87, 308, 62, 3, 10, 3, 0}, /* 165: RC_MMM_MUMBO_TOKEN_IN_CHIMNEY_INSIDE_DINING_ROOM */
+    {88, 12, 100, 1, 10, 1, 0}, /* 166: RC_MMM_JIGGY_INSIDE_LOGGO */
+    {88, 12, 116, 3, 10, 3, 0}, /* 167: RC_MMM_MUMBO_TOKEN_INSIDE_LOGGO */
+    {90, 12, 98, 1, 10, 1, 0}, /* 168: RC_MMM_JIGGY_TUMBLARS_PUZZLE */
+    {91, 1436, 92, 1, 10, 1, 0}, /* 169: RC_MMM_JIGGY_INSIDE_THE_WELLS_BUCKET */
+    {91, 1436, 63, 3, 10, 3, 0}, /* 170: RC_MMM_MUMBO_TOKEN_INSIDE_WELL */
+    {94, 1328, 18, 2, 10, 2, 0}, /* 171: RC_MMM_EMPTY_HONEYCOMB_BENEATH_THE_FLOORBOARDS */
+    {96, 12, 1, 2, 1, 2, 0}, /* 172: RC_MM_EMPTY_HONEYCOMB_HILL */
+    {96, 1454, 2, 2, 1, 2, 0}, /* 173: RC_MM_EMPTY_HONEYCOMB_JUJU */
+    {96, 1460, 9, 1, 1, 1, 0}, /* 174: RC_MM_JIGGY_CHIMPY */
+    {96, 1454, 10, 1, 1, 1, 0}, /* 175: RC_MM_JIGGY_CONGA */
+    {96, 12, 7, 1, 1, 1, 0}, /* 176: RC_MM_JIGGY_HILL */
+    {96, 9, 5, 1, 1, 1, 0}, /* 177: RC_MM_JIGGY_HUTS */
+    {96, 1466, 1, 1, 1, 1, 0}, /* 178: RC_MM_JIGGY_JINJO */
+    {96, 887, 4, 1, 1, 1, 0}, /* 179: RC_MM_JIGGY_JUJU */
+    {96, 257, 3, 1, 1, 1, 0}, /* 180: RC_MM_JIGGY_MUMBOS_SKULL */
+    {96, 12, 8, 1, 1, 1, 0}, /* 181: RC_MM_JIGGY_ORANGE_PADS */
+    {96, 12, 6, 1, 1, 1, 0}, /* 182: RC_MM_JIGGY_RUINS */
+    {96, 12, 2, 4, 1, 34, 0}, /* 183: RC_MM_MOLEHILL_BEAK_BUSTER */
+    {96, 12, 3, 4, 1, 48, 0}, /* 184: RC_MM_MOLEHILL_TALON_TROT */
+    {96, 257, 1, 4, 1, 38, 0}, /* 185: RC_MM_MOLEHILL_USE_EGGS */
+    {96, 12, 4, 3, 1, 3, 0}, /* 186: RC_MM_MUMBO_TOKEN_BEHIND_PINK_JINJO */
+    {96, 12, 2, 3, 1, 3, 0}, /* 187: RC_MM_MUMBO_TOKEN_BEHIND_RUINS */
+    {96, 257, 1, 3, 1, 3, 0}, /* 188: RC_MM_MUMBO_TOKEN_STUMP_NEAR_CONGA */
+    {96, 12, 3, 3, 1, 3, 0}, /* 189: RC_MM_MUMBO_TOKEN_UNDER_RAMP_TO_MUMBOS_SKULL */
+    {97, 1487, 5, 3, 1, 3, 0}, /* 190: RC_MM_MUMBO_TOKEN_INSIDE_TICKERS_TOWER */
+    {99, 12, 2, 1, 1, 1, 0}, /* 191: RC_MM_JIGGY_TICKERS_TOWER */
+    {100, 1577, 89, 1, 9, 1, 0}, /* 192: RC_RBB_JIGGY_CRANE_CAGE */
+    {100, 236, 85, 1, 9, 1, 0}, /* 193: RC_RBB_JIGGY_FUNNEL */
+    {100, 1586, 81, 1, 9, 1, 0}, /* 194: RC_RBB_JIGGY_JINJO */
+    {100, 1601, 87, 1, 9, 1, 0}, /* 195: RC_RBB_JIGGY_PROPELLOR */
+    {100, 1610, 83, 1, 9, 1, 0}, /* 196: RC_RBB_JIGGY_SNORKEL */
+    {100, 1616, 84, 1, 9, 1, 0}, /* 197: RC_RBB_JIGGY_WHISTLE */
+    {100, 1625, 70, 3, 9, 3, 0}, /* 198: RC_RBB_MUMBO_TOKEN_TOXIC_WASTE_POND */
+    {100, 12, 68, 3, 9, 3, 0}, /* 199: RC_RBB_MUMBO_TOKEN_ON_LIFE_BOAT */
+    {100, 12, 67, 3, 9, 3, 0}, /* 200: RC_RBB_MUMBO_TOKEN_SHIPS_PROW */
+    {100, 236, 71, 3, 9, 3, 0}, /* 201: RC_RBB_MUMBO_TOKEN_UNDER_CHOMPA_IN_WITCH_SWITCH_TOWER */
+    {100, 1304, 66, 3, 9, 3, 0}, /* 202: RC_RBB_MUMBO_TOKEN_TOP_OF_SHIPS_CHIMNEY */
+    {100, 1454, 69, 3, 9, 3, 0}, /* 203: RC_RBB_MUMBO_TOKEN_FRONT_OF_CHOMPA_LEFT_OF_SHIP */
+    {102, 1643, 15, 2, 9, 2, 0}, /* 204: RC_RBB_EMPTY_HONEYCOMB_BOAT_HOUSE */
+    {103, 365, 86, 1, 9, 1, 0}, /* 205: RC_RBB_JIGGY_BOSS_BOOM_BOX */
+    {104, 257, 74, 3, 9, 3, 0}, /* 206: RC_RBB_MUMBO_TOKEN_TOP_OF_BUNK_IN_CABIN */
+    {105, 1649, 88, 1, 9, 1, 0}, /* 207: RC_RBB_JIGGY_CAPTAINS_CABIN */
+    {107, 257, 16, 2, 9, 2, 0}, /* 208: RC_RBB_EMPTY_HONEYCOMB_ENGINE_ROOM */
+    {107, 1658, 90, 1, 9, 1, 0}, /* 209: RC_RBB_JIGGY_ENGINE_ROOM */
+    {107, 257, 77, 3, 9, 3, 0}, /* 210: RC_RBB_MUMBO_TOKEN_ENGINE_ROOM_LEFT_PIPE */
+    {107, 257, 78, 3, 9, 3, 0}, /* 211: RC_RBB_MUMBO_TOKEN_ENGINE_ROOM_RIGHT_PIPE */
+    {107, 12, 79, 3, 9, 3, 0}, /* 212: RC_RBB_MUMBO_TOKEN_ENGINE_ROOM_SPINNING_PLATFORM */
+    {108, 12, 76, 3, 9, 3, 0}, /* 213: RC_RBB_MUMBO_TOKEN_INSIDE_KITCHEN */
+    {109, 12, 75, 3, 9, 3, 0}, /* 214: RC_RBB_MUMBO_TOKEN_INSIDE_NAVIGATION_ROOM */
+    {110, 12, 72, 3, 9, 3, 0}, /* 215: RC_RBB_MUMBO_TOKEN_UNDER_CHOMPA_INSIDE_FIRST_BLUE_CONTAINER */
+    {111, 257, 73, 3, 9, 3, 0}, /* 216: RC_RBB_MUMBO_TOKEN_TOP_OF_BOX_INSIDE_SECOND_BLUE_CONTAINER */
+    {113, 12, 80, 3, 9, 3, 0}, /* 217: RC_RBB_MUMBO_TOKEN_TOP_OF_BOX_INSIDE_TNT_ROOM */
+    {115, 257, 82, 1, 9, 1, 0}, /* 218: RC_RBB_JIGGY_WAREHOUSE */
+    {116, 1514, 23, 2, 11, 2, 0}, /* 219: RC_SM_EMPTY_HONEYCOMB_COLLIWOBBLE */
+    {116, 1661, 24, 2, 11, 2, 0}, /* 220: RC_SM_EMPTY_HONEYCOMB_QUARRIES */
+    {116, 257, 19, 2, 11, 2, 0}, /* 221: RC_SM_EMPTY_HONEYCOMB_STUMP */
+    {116, 1460, 22, 2, 11, 2, 0}, /* 222: RC_SM_EMPTY_HONEYCOMB_TREE */
+    {116, 266, 21, 2, 11, 2, 0}, /* 223: RC_SM_EMPTY_HONEYCOMB_UNDERWATER */
+    {116, 284, 20, 2, 11, 2, 0}, /* 224: RC_SM_EMPTY_HONEYCOMB_WATERFALL */
+    {117, 12, 4, 2, 2, 2, 0}, /* 225: RC_TTC_EMPTY_HONEYCOMB_FLOATING_BOX */
+    {117, 266, 3, 2, 2, 2, 0}, /* 226: RC_TTC_EMPTY_HONEYCOMB_UNDERWATER */
+    {117, 707, 13, 1, 2, 1, 0}, /* 227: RC_TTC_JIGGY_ALCOVE1 */
+    {117, 12, 14, 1, 2, 1, 0}, /* 228: RC_TTC_JIGGY_ALCOVE2 */
+    {117, 1697, 20, 1, 2, 1, 0}, /* 229: RC_TTC_JIGGY_BLUBBER */
+    {117, 1706, 11, 1, 2, 1, 0}, /* 230: RC_TTC_JIGGY_JINJO */
+    {117, 845, 19, 1, 2, 1, 0}, /* 231: RC_TTC_JIGGY_LOCKUP */
+    {117, 266, 15, 1, 2, 1, 0}, /* 232: RC_TTC_JIGGY_POOL */
+    {117, 1721, 17, 1, 2, 1, 0}, /* 233: RC_TTC_JIGGY_RED_X */
+    {117, 12, 4, 4, 2, 45, 0}, /* 234: RC_TTC_MOLEHILL_SHOCK_JUMP */
+    {117, 173, 5, 4, 2, 41, 0}, /* 235: RC_TTC_MOLEHILL_FLIGHT */
+    {117, 12, 12, 3, 2, 3, 0}, /* 236: RC_TTC_MUMBO_TOKEN_BEHIND_PILLAR_UNDERWATER */
+    {117, 12, 15, 3, 2, 3, 0}, /* 237: RC_TTC_MUMBO_TOKEN_BEHIND_NIPPER */
+    {117, 707, 14, 3, 2, 3, 0}, /* 238: RC_TTC_MUMBO_TOKEN_FLOATING_ABOVE_SHOCKJUMP_PAD */
+    {117, 257, 7, 3, 2, 3, 0}, /* 239: RC_TTC_MUMBO_TOKEN_INSIDE_LOCKUP_1 */
+    {117, 257, 8, 3, 2, 3, 0}, /* 240: RC_TTC_MUMBO_TOKEN_INSIDE_LOCKUP_2 */
+    {117, 12, 11, 3, 2, 3, 0}, /* 241: RC_TTC_MUMBO_TOKEN_ON_FLOATING_BOX */
+    {117, 266, 13, 3, 2, 3, 0}, /* 242: RC_TTC_MUMBO_TOKEN_POND_BOTTOM */
+    {117, 236, 9, 3, 2, 3, 0}, /* 243: RC_TTC_MUMBO_TOKEN_SALTY_HIPPO_MAST */
+    {118, 12, 18, 1, 2, 1, 0}, /* 244: RC_TTC_JIGGY_NIPPER */
+    {119, 9, 16, 1, 2, 1, 0}, /* 245: RC_TTC_JIGGY_SANDCASTLE */
+    {121, 266, 6, 3, 2, 3, 0}, /* 246: RC_TTC_MUMBO_TOKEN_INSIDE_SALTY_HIPPO */
+    {122, 1748, 10, 3, 2, 3, 0}, /* 247: RC_TTC_MUMBO_TOKEN_BEHIND_LIGHTHOUSE_DOOR */
+    {123, 707, 12, 1, 2, 1, 0}, /* 248: RC_TTC_JIGGY_LIGHTHOUSE */
+};
+
+const BkrEventDef bkr_event_defs[BKR_EVENT_DEF_COUNT] = {
+    {95, 14}, /* WITCH_SWITCH_BUBBLEGLOOP_SWAMP */
+    {12, 20}, /* JINJO_BGS_BLUE */
+    {13, 35}, /* JINJO_BGS_GREEN */
+    {14, 44}, /* JINJO_BGS_ORANGE */
+    {15, 0}, /* JINJO_BGS_PINK */
+    {16, 56}, /* JINJO_BGS_YELLOW */
+    {26, 284}, /* JINJO_CC_YELLOW */
+    {25, 12}, /* JINJO_CC_PINK */
+    {96, 9}, /* WITCH_SWITCH_CLANKERS_CAVERN */
+    {22, 12}, /* JINJO_CC_BLUE */
+    {24, 9}, /* JINJO_CC_ORANGE */
+    {23, 12}, /* JINJO_CC_GREEN */
+    {19, 12}, /* JINJO_CCW_ORANGE */
+    {82, 9}, /* TRIGGER_SWITCH_CCW_WINTER */
+    {80, 9}, /* TRIGGER_SWITCH_CCW_SPRING */
+    {20, 12}, /* JINJO_CCW_PINK */
+    {81, 9}, /* TRIGGER_SWITCH_CCW_SUMMER */
+    {18, 551}, /* JINJO_CCW_GREEN */
+    {79, 9}, /* TRIGGER_SWITCH_CCW_AUTUMN */
+    {11, 632}, /* GNAWTYS_BOULDER */
+    {21, 12}, /* JINJO_CCW_YELLOW */
+    {17, 710}, /* JINJO_CCW_BLUE */
+    {97, 9}, /* WITCH_SWITCH_CLICK_CLOCK_WOOD */
+    {31, 12}, /* JINJO_FP_YELLOW */
+    {29, 257}, /* JINJO_FP_ORANGE */
+    {98, 779}, /* WITCH_SWITCH_FREEZEEZY_PEAK */
+    {28, 12}, /* JINJO_FP_GREEN */
+    {30, 710}, /* JINJO_FP_PINK */
+    {27, 809}, /* JINJO_FP_BLUE */
+    {32, 12}, /* JINJO_GV_BLUE */
+    {36, 12}, /* JINJO_GV_YELLOW */
+    {99, 9}, /* WITCH_SWITCH_GOBIS_VALLEY */
+    {35, 12}, /* JINJO_GV_PINK */
+    {34, 887}, /* JINJO_GV_ORANGE */
+    {8, 266}, /* DRAIN_WATER_PYRAMID */
+    {33, 12}, /* JINJO_GV_GREEN */
+    {57, 173}, /* NOTE_DOOR_180 */
+    {71, 266}, /* PUZZLE_BOARD_CLICK_CLOCK_WOOD */
+    {58, 707}, /* NOTE_DOOR_260 */
+    {62, 956}, /* NOTE_DOOR_640 */
+    {91, 962}, /* TRIGGER_SWITCH_GL_WATER_LEVEL_3 */
+    {10, 12}, /* GAME_COMPLETE */
+    {7, 12}, /* CAULDRON_YELLOW_2 */
+    {64, 12}, /* NOTE_DOOR_810 */
+    {65, 998}, /* NOTE_DOOR_828 */
+    {66, 998}, /* NOTE_DOOR_846 */
+    {67, 998}, /* NOTE_DOOR_864 */
+    {68, 998}, /* NOTE_DOOR_882 */
+    {74, 998}, /* PUZZLE_BOARD_GRUNTILDA */
+    {6, 12}, /* CAULDRON_YELLOW_1 */
+    {61, 173}, /* NOTE_DOOR_50 */
+    {76, 12}, /* PUZZLE_BOARD_MUMBOS_MOUNTAIN */
+    {72, 1031}, /* PUZZLE_BOARD_FREEZEEZY_PEAK */
+    {69, 1046}, /* PUZZLE_BOARD_BUBBLEGLOOP_SWAMP */
+    {83, 1052}, /* TRIGGER_SWITCH_GL_ABOVE_WATER_PIPE */
+    {84, 1064}, /* TRIGGER_SWITCH_GL_BGS_PUZZLE_BOARD_GRATE */
+    {88, 9}, /* TRIGGER_SWITCH_GL_UNDERWATER_PIPES */
+    {3, 12}, /* CAULDRON_ORANGE_2 */
+    {63, 257}, /* NOTE_DOOR_765 */
+    {85, 1094}, /* TRIGGER_SWITCH_GL_CCW_PUZZLE_BOARD_PLATFORM */
+    {0, 887}, /* CAULDRON_BLUE_1 */
+    {5, 887}, /* CAULDRON_PURPLE_2 */
+    {59, 12}, /* NOTE_DOOR_350 */
+    {60, 12}, /* NOTE_DOOR_450 */
+    {86, 1133}, /* TRIGGER_SWITCH_GL_FLIGHT_PAD */
+    {87, 1190}, /* TRIGGER_SWITCH_GL_SHOCK_PAD */
+    {1, 1220}, /* CAULDRON_BLUE_2 */
+    {90, 1226}, /* TRIGGER_SWITCH_GL_WATER_LEVEL_2 */
+    {73, 12}, /* PUZZLE_BOARD_GOBIS_VALLEY */
+    {2, 12}, /* CAULDRON_ORANGE_1 */
+    {73, 12}, /* PUZZLE_BOARD_GOBIS_VALLEY */
+    {75, 284}, /* PUZZLE_BOARD_MAD_MONSTER_MANSION */
+    {77, 698}, /* PUZZLE_BOARD_RUSTY_BUCKET_BAY */
+    {4, 12}, /* CAULDRON_PURPLE_1 */
+    {70, 707}, /* PUZZLE_BOARD_CLANKERS_CAVERN */
+    {78, 12}, /* PUZZLE_BOARD_TREASURE_TROVE_COVE */
+    {89, 9}, /* TRIGGER_SWITCH_GL_WATER_LEVEL_1 */
+    {100, 9}, /* WITCH_SWITCH_MAD_MONSTER_MANSION */
+    {37, 707}, /* JINJO_MMM_BLUE */
+    {38, 1304}, /* JINJO_MMM_GREEN */
+    {39, 12}, /* JINJO_MMM_ORANGE */
+    {41, 707}, /* JINJO_MMM_YELLOW */
+    {40, 1367}, /* JINJO_MMM_PINK */
+    {101, 1094}, /* WITCH_SWITCH_MUMBOS_MOUNTAIN */
+    {42, 12}, /* JINJO_MM_BLUE */
+    {43, 9}, /* JINJO_MM_GREEN */
+    {44, 12}, /* JINJO_MM_ORANGE */
+    {45, 12}, /* JINJO_MM_PINK */
+    {46, 12}, /* JINJO_MM_YELLOW */
+    {102, 1526}, /* WITCH_SWITCH_RUSTY_BUCKET_BAY */
+    {48, 284}, /* JINJO_RBB_GREEN */
+    {49, 1541}, /* JINJO_RBB_ORANGE */
+    {50, 266}, /* JINJO_RBB_PINK */
+    {51, 12}, /* JINJO_RBB_YELLOW */
+    {92, 9}, /* TRIGGER_SWITCH_RBB_ANCHOR */
+    {93, 9}, /* TRIGGER_SWITCH_RBB_PROPELLOR_FIRST */
+    {94, 1094}, /* TRIGGER_SWITCH_RBB_PROPELLOR_SECOND */
+    {47, 12}, /* JINJO_RBB_BLUE */
+    {9, 887}, /* DRAIN_WATER_SANDCASTLE */
+    {52, 266}, /* JINJO_TTC_BLUE */
+    {53, 236}, /* JINJO_TTC_GREEN */
+    {54, 12}, /* JINJO_TTC_ORANGE */
+    {55, 284}, /* JINJO_TTC_PINK */
+    {56, 284}, /* JINJO_TTC_YELLOW */
+    {103, 9}, /* WITCH_SWITCH_TREASURE_TROVE_COVE */
+};
+
+const BkrNoteGroupDef bkr_note_groups[BKR_NOTE_GROUP_COUNT] = {
+    {12, 29, 4},
+    {35, 20, 4},
+    {68, 5, 4},
+    {74, 12, 4},
+    {20, 1, 4},
+    {83, 1, 4},
+    {104, 1, 4},
+    {122, 4, 4},
+    {137, 1, 4},
+    {44, 10, 4},
+    {0, 4, 4},
+    {12, 6, 4},
+    {12, 6, 4},
+    {12, 4, 3},
+    {284, 4, 3},
+    {12, 6, 3},
+    {12, 16, 3},
+    {12, 2, 3},
+    {308, 4, 3},
+    {12, 6, 3},
+    {12, 40, 3},
+    {284, 1, 3},
+    {365, 9, 3},
+    {12, 8, 3},
+    {392, 2, 8},
+    {12, 15, 8},
+    {308, 6, 8},
+    {12, 4, 8},
+    {257, 4, 8},
+    {257, 3, 8},
+    {12, 8, 8},
+    {12, 4, 8},
+    {491, 3, 8},
+    {12, 19, 8},
+    {644, 2, 8},
+    {12, 2, 8},
+    {173, 3, 8},
+    {12, 9, 8},
+    {12, 4, 8},
+    {12, 5, 8},
+    {710, 4, 8},
+    {257, 3, 8},
+    {12, 13, 5},
+    {12, 6, 5},
+    {12, 29, 5},
+    {773, 9, 5},
+    {12, 23, 5},
+    {293, 8, 5},
+    {12, 12, 5},
+    {12, 2, 7},
+    {836, 3, 7},
+    {842, 6, 7},
+    {12, 4, 7},
+    {12, 7, 7},
+    {12, 8, 7},
+    {12, 4, 7},
+    {890, 2, 7},
+    {887, 1, 7},
+    {266, 4, 7},
+    {845, 5, 7},
+    {12, 35, 7},
+    {6, 19, 7},
+    {12, 4, 10},
+    {173, 10, 10},
+    {12, 2, 10},
+    {257, 4, 10},
+    {12, 4, 10},
+    {1409, 4, 10},
+    {12, 17, 10},
+    {1412, 4, 10},
+    {236, 4, 10},
+    {821, 4, 10},
+    {12, 5, 10},
+    {12, 4, 10},
+    {257, 4, 10},
+    {12, 8, 10},
+    {12, 2, 10},
+    {12, 4, 10},
+    {1436, 7, 10},
+    {12, 9, 10},
+    {12, 79, 1},
+    {1445, 6, 1},
+    {9, 5, 1},
+    {1481, 6, 1},
+    {12, 4, 1},
+    {12, 15, 9},
+    {236, 8, 9},
+    {1556, 5, 9},
+    {173, 4, 9},
+    {1565, 3, 9},
+    {1460, 2, 9},
+    {851, 3, 9},
+    {284, 3, 9},
+    {12, 4, 9},
+    {12, 4, 9},
+    {12, 3, 9},
+    {12, 4, 9},
+    {12, 8, 9},
+    {1658, 4, 9},
+    {12, 5, 9},
+    {12, 4, 9},
+    {12, 8, 9},
+    {12, 4, 9},
+    {257, 5, 9},
+    {296, 4, 9},
+    {257, 5, 2},
+    {707, 9, 2},
+    {12, 42, 2},
+    {173, 5, 2},
+    {1685, 8, 2},
+    {284, 4, 2},
+    {293, 1, 2},
+    {12, 6, 2},
+    {1673, 4, 2},
+    {12, 4, 2},
+    {266, 4, 2},
+    {284, 3, 2},
+    {12, 5, 2},
+};
+
+const bkr_u16 bkr_rule_code[BKR_RULE_CODE_SIZE] = {
+    8, 5, 5, 2, 12, 0, 3, 14, 0, 3, 2, 0, 1, 0, 3, 2,
+    3, 13, 12, 0, 3, 16, 3, 7, 13, 3, 11, 13, 3, 14, 3, 5,
+    12, 13, 0, 8, 5, 5, 2, 12, 3, 16, 13, 0, 8, 5, 5, 2,
+    12, 3, 14, 13, 3, 18, 13, 0, 3, 16, 3, 7, 13, 3, 11, 13,
+    3, 14, 13, 0, 3, 13, 3, 2, 12, 0, 8, 5, 5, 2, 12, 3,
+    14, 13, 0, 3, 16, 3, 7, 13, 3, 11, 13, 3, 14, 3, 5, 12,
+    3, 7, 12, 13, 3, 2, 13, 0, 3, 16, 3, 7, 13, 3, 11, 13,
+    3, 14, 3, 5, 12, 3, 7, 12, 13, 0, 3, 16, 3, 7, 13, 3,
+    11, 3, 14, 12, 13, 3, 18, 13, 0, 3, 16, 3, 7, 13, 3, 11,
+    3, 5, 12, 3, 14, 12, 13, 3, 18, 13, 0, 3, 6, 3, 16, 12,
+    3, 2, 12, 3, 13, 12, 3, 14, 12, 3, 18, 13, 0, 3, 16, 0,
+    8, 5, 5, 2, 12, 3, 11, 13, 3, 4, 13, 3, 6, 13, 3, 2,
+    13, 3, 12, 13, 3, 18, 13, 3, 0, 13, 0, 4, 12, 4, 13, 12,
+    4, 14, 12, 4, 15, 12, 4, 16, 12, 0, 3, 14, 3, 2, 12, 0,
+    3, 13, 3, 2, 12, 3, 11, 12, 3, 0, 12, 0, 3, 5, 0, 8,
+    5, 5, 2, 12, 3, 17, 12, 0, 3, 8, 3, 7, 12, 3, 11, 13,
+    0, 3, 8, 0, 3, 5, 3, 8, 12, 0, 3, 15, 0, 4, 22, 4,
+    23, 12, 4, 24, 12, 4, 25, 12, 4, 26, 12, 0, 3, 7, 3, 11,
+    13, 3, 16, 13, 0, 3, 9, 0, 3, 7, 3, 11, 13, 3, 16, 13,
+    3, 8, 12, 0, 3, 18, 0, 3, 7, 3, 11, 13, 3, 13, 12, 0,
+    3, 6, 3, 11, 13, 3, 7, 3, 11, 13, 3, 16, 13, 12, 0, 3,
+    11, 3, 4, 13, 3, 6, 13, 3, 2, 13, 3, 12, 13, 3, 18, 13,
+    3, 0, 13, 3, 7, 3, 11, 13, 3, 16, 13, 12, 0, 3, 11, 3,
+    4, 13, 3, 6, 13, 3, 2, 13, 3, 12, 13, 3, 18, 13, 3, 0,
+    13, 0, 3, 14, 3, 16, 13, 0, 4, 11, 3, 8, 12, 0, 4, 11,
+    3, 15, 12, 0, 3, 0, 3, 18, 13, 3, 11, 13, 3, 6, 13, 3,
+    8, 12, 0, 3, 6, 3, 18, 13, 3, 11, 13, 3, 8, 12, 3, 15,
+    12, 0, 4, 80, 0, 4, 81, 0, 4, 79, 0, 4, 82, 0, 4, 17,
+    4, 18, 12, 4, 19, 12, 4, 20, 12, 4, 21, 12, 0, 8, 6, 5,
+    23, 5, 29, 13, 5, 15, 13, 12, 0, 3, 16, 3, 13, 12, 8, 6,
+    5, 23, 5, 29, 13, 5, 15, 13, 12, 13, 0, 3, 7, 3, 11, 13,
+    3, 16, 13, 3, 8, 13, 3, 14, 13, 0, 3, 18, 8, 6, 5, 23,
+    5, 29, 13, 5, 15, 13, 12, 13, 0, 3, 16, 8, 6, 5, 23, 5,
+    29, 13, 5, 15, 13, 12, 13, 0, 3, 14, 8, 6, 5, 23, 5, 29,
+    13, 5, 15, 13, 12, 13, 0, 3, 8, 3, 18, 12, 8, 6, 5, 23,
+    5, 29, 13, 5, 15, 13, 12, 13, 0, 8, 6, 5, 23, 5, 29, 13,
+    5, 15, 13, 12, 4, 82, 3, 9, 12, 13, 0, 3, 2, 3, 16, 12,
+    0, 3, 16, 3, 11, 3, 4, 13, 3, 6, 13, 3, 2, 13, 3, 12,
+    13, 3, 18, 13, 3, 0, 13, 3, 7, 3, 11, 13, 3, 16, 13, 12,
+    3, 8, 12, 13, 3, 13, 12, 0, 3, 0, 3, 2, 13, 3, 6, 13,
+    3, 18, 13, 0, 4, 11, 0, 3, 7, 3, 11, 13, 3, 16, 13, 3,
+    8, 12, 3, 13, 12, 0, 3, 11, 3, 4, 13, 3, 6, 13, 3, 2,
+    13, 3, 12, 13, 3, 18, 13, 3, 0, 13, 3, 7, 3, 11, 13, 3,
+    16, 13, 12, 3, 8, 12, 3, 13, 12, 0, 3, 0, 3, 18, 13, 3,
+    11, 13, 0, 3, 13, 0, 3, 8, 3, 9, 13, 0, 3, 1, 3, 9,
+    12, 0, 3, 6, 3, 18, 13, 3, 11, 13, 0, 4, 27, 4, 28, 12,
+    4, 29, 12, 4, 30, 12, 4, 31, 12, 0, 3, 16, 3, 13, 12, 3,
+    5, 12, 0, 3, 14, 8, 4, 5, 42, 12, 13, 0, 3, 16, 8, 4,
+    5, 42, 12, 13, 0, 8, 4, 5, 42, 12, 0, 3, 1, 3, 2, 12,
+    3, 9, 12, 0, 3, 16, 8, 4, 12, 5, 42, 12, 0, 3, 16, 8,
+    4, 12, 5, 42, 12, 3, 17, 12, 0, 3, 7, 3, 11, 13, 3, 16,
+    13, 3, 16, 12, 0, 3, 16, 3, 13, 12, 0, 3, 2, 3, 6, 12,
+    3, 9, 12, 0, 3, 16, 3, 17, 13, 0, 4, 8, 0, 3, 8, 3,
+    9, 12, 0, 3, 7, 3, 11, 13, 3, 16, 13, 3, 5, 12, 0, 4,
+    32, 4, 33, 12, 4, 34, 12, 4, 35, 12, 4, 36, 12, 0, 3, 6,
+    3, 5, 12, 3, 8, 12, 0, 3, 6, 0, 3, 7, 3, 11, 13, 3,
+    16, 13, 3, 6, 12, 0, 3, 9, 3, 1, 12, 0, 3, 8, 3, 6,
+    12, 0, 3, 17, 0, 3, 2, 3, 8, 12, 3, 9, 12, 0, 6, 1,
+    4, 57, 12, 0, 6, 2, 4, 58, 12, 3, 13, 12, 0, 4, 87, 4,
+    95, 12, 3, 13, 12, 0, 6, 5, 4, 62, 12, 0, 4, 90, 3, 8,
+    12, 0, 3, 6, 3, 18, 13, 3, 11, 13, 4, 90, 12, 3, 2, 12,
+    0, 4, 102, 4, 89, 12, 0, 7, 9, 4, 74, 12, 3, 9, 12, 3,
+    1, 12, 3, 6, 12, 0, 6, 7, 4, 64, 12, 0, 6, 0, 4, 61,
+    12, 0, 7, 0, 4, 76, 12, 0, 4, 101, 8, 2, 12, 5, 98, 12,
+    0, 7, 3, 4, 69, 12, 0, 3, 14, 8, 5, 5, 2, 12, 13, 0,
+    7, 2, 4, 70, 12, 0, 4, 84, 3, 15, 12, 0, 4, 88, 3, 7,
+    3, 11, 13, 3, 16, 13, 12, 0, 4, 83, 0, 4, 88, 3, 7, 3,
+    11, 13, 3, 16, 13, 12, 3, 8, 12, 0, 7, 8, 4, 71, 12, 0,
+    6, 6, 4, 63, 12, 0, 3, 2, 3, 8, 12, 0, 4, 97, 8, 6,
+    12, 5, 23, 5, 29, 13, 5, 15, 13, 12, 0, 7, 4, 4, 72, 12,
+    0, 6, 4, 4, 60, 12, 0, 6, 3, 4, 59, 12, 0, 3, 6, 3,
+    13, 12, 0, 4, 98, 4, 86, 12, 3, 17, 12, 0, 4, 100, 3, 6,
+    3, 18, 13, 3, 11, 13, 12, 3, 7, 3, 11, 13, 3, 16, 13, 12,
+    0, 3, 7, 3, 11, 13, 3, 16, 13, 3, 8, 13, 3, 13, 12, 0,
+    7, 5, 4, 73, 12, 0, 3, 0, 3, 18, 13, 3, 11, 13, 3, 6,
+    13, 3, 2, 12, 0, 4, 99, 4, 87, 12, 3, 13, 12, 0, 7, 7,
+    4, 77, 12, 0, 4, 89, 3, 8, 12, 0, 3, 7, 3, 11, 13, 3,
+    16, 13, 3, 0, 3, 18, 13, 3, 11, 13, 3, 6, 13, 12, 4, 89,
+    12, 3, 2, 12, 0, 3, 0, 3, 18, 13, 3, 11, 13, 8, 3, 12,
+    5, 89, 12, 0, 7, 6, 4, 75, 12, 0, 7, 1, 4, 78, 12, 0,
+    4, 103, 3, 8, 12, 0, 4, 89, 3, 6, 3, 11, 13, 12, 0, 3,
+    6, 3, 11, 13, 0, 4, 96, 0, 3, 5, 3, 13, 12, 0, 3, 2,
+    3, 16, 12, 3, 17, 12, 0, 3, 8, 3, 16, 12, 3, 13, 12, 0,
+    8, 3, 5, 89, 12, 0, 3, 6, 3, 18, 13, 3, 11, 13, 3, 5,
+    8, 3, 5, 89, 12, 13, 12, 0, 3, 6, 3, 18, 13, 3, 11, 13,
+    3, 5, 12, 3, 13, 12, 0, 3, 0, 3, 18, 13, 3, 11, 13, 3,
+    6, 13, 0, 3, 0, 3, 18, 13, 3, 11, 13, 3, 6, 13, 3, 5,
+    3, 13, 12, 13, 0, 3, 0, 3, 18, 13, 3, 11, 13, 3, 8, 12,
+    0, 3, 7, 0, 3, 5, 8, 3, 5, 89, 12, 13, 0, 4, 37, 4,
+    38, 12, 4, 39, 12, 4, 40, 12, 4, 41, 12, 0, 3, 15, 8, 3,
+    5, 89, 12, 13, 0, 3, 15, 8, 2, 5, 98, 12, 13, 0, 3, 6,
+    3, 8, 12, 0, 3, 5, 3, 8, 13, 0, 4, 42, 4, 43, 12, 4,
+    44, 12, 4, 45, 12, 4, 46, 12, 0, 8, 2, 5, 98, 12, 0, 3,
+    8, 3, 16, 13, 8, 2, 5, 98, 12, 13, 0, 3, 7, 3, 11, 13,
+    3, 16, 13, 3, 0, 12, 3, 5, 12, 0, 3, 11, 0, 3, 6, 3,
+    5, 3, 16, 13, 12, 0, 3, 7, 3, 11, 13, 3, 16, 13, 3, 2,
+    12, 3, 5, 12, 0, 3, 7, 3, 11, 13, 3, 16, 13, 3, 5, 12,
+    3, 6, 12, 0, 3, 6, 3, 5, 13, 3, 16, 12, 0, 3, 6, 3,
+    16, 12, 3, 5, 13, 3, 13, 13, 0, 3, 0, 3, 5, 12, 3, 6,
+    12, 0, 4, 47, 4, 48, 12, 4, 49, 12, 4, 50, 12, 4, 51, 12,
+    0, 4, 93, 4, 94, 12, 3, 15, 12, 0, 3, 2, 3, 15, 12, 0,
+    3, 2, 3, 5, 3, 8, 13, 12, 0, 3, 7, 3, 11, 13, 3, 16,
+    13, 3, 5, 3, 6, 3, 16, 12, 13, 12, 0, 3, 2, 3, 9, 12,
+    0, 3, 11, 3, 0, 13, 3, 6, 13, 0, 4, 93, 0, 3, 0, 3,
+    6, 13, 3, 2, 13, 3, 18, 13, 0, 4, 9, 3, 15, 13, 0, 3,
+    11, 3, 18, 13, 0, 3, 7, 3, 11, 13, 3, 16, 13, 3, 5, 13,
+    0, 3, 2, 3, 8, 12, 3, 15, 12, 0, 4, 52, 4, 53, 12, 4,
+    54, 12, 4, 55, 12, 4, 56, 12, 0, 3, 11, 3, 4, 13, 3, 6,
+    13, 3, 2, 13, 3, 12, 13, 3, 18, 13, 3, 0, 13, 3, 2, 12,
+    3, 13, 12, 0, 3, 0, 3, 18, 13, 3, 11, 13, 3, 6, 13, 3,
+    7, 3, 11, 13, 3, 16, 13, 12, 0,
+};
+
+const char* const bkr_location_names[BKR_LOCATION_COUNT] = {
+    "BGS Jiggy - Croctus",
+    "BGS Jiggy - Elevated Walkway",
+    "BGS Jiggy - Flibbits",
+    "BGS Jiggy - Huts",
+    "BGS Jiggy - Jinjo",
+    "BGS Jiggy - Maze",
+    "BGS Jiggy - Pinkegg",
+    "BGS Jiggy - Tanktup",
+    "BGS Molehill - Wading Boots",
+    "BGS Token - Alcove Above Yellow Flibbits",
+    "BGS Token - Behind Mumbos Skull",
+    "BGS Token - Behind Yellow Jinjo",
+    "BGS Token - Floating Between Hut And Croctus",
+    "BGS Token - Top Of Pole Next To Big Egg",
+    "BGS Token - Under Hut 1",
+    "BGS Token - Under Hut 2",
+    "BGS Jiggy - Mr Vile",
+    "BGS Token - Inside Mr Viles",
+    "BGS Honeycomb - Mumbos",
+    "BGS Token - Inside Mumbos Skull",
+    "BGS Honeycomb - Tanktup",
+    "BGS Jiggy - Tiptup",
+    "BGS Token - Behind Tiptup",
+    "CC Jiggy - Jinjo",
+    "CC Token - Above Level Entrance",
+    "CC Jiggy - Rings",
+    "CC Jiggy - Tooth",
+    "CC Token - Clankers Left Tooth",
+    "CC Jiggy - Fast Sawblades",
+    "CC Molehill - Wonderwing",
+    "CC Jiggy - Slow Sawblades",
+    "CC Honeycomb - Underwater",
+    "CC Jiggy - Bolt",
+    "CC Jiggy - Clanker Raised",
+    "CC Jiggy - Long Pipe",
+    "CC Jiggy - Tail",
+    "CC Jiggy - Snippets",
+    "CC Token - Chompa Behind Clankers Tail",
+    "CC Token - Tunnel Right Of Clanker",
+    "CC Honeycomb - Abovewater",
+    "CC Token - Alcove With Open Grate",
+    "CCW Jiggy - Flower",
+    "CCW Jiggy - Gnawty",
+    "CCW Token - Autumn Floating Above Big Clucker",
+    "CCW Token - Autumn Leaf Near Treehouse",
+    "CCW Token - Autumn Snarebear Near Entrance",
+    "CCW Token - Autumn Top Of Branch",
+    "CCW Jiggy - Nabnut",
+    "CCW Token - Autumn Snarebear Top Of Tree",
+    "CCW Jiggy - Jinjo",
+    "CCW Token - Spring Snarebear Near Big Flower",
+    "CCW Token - Spring Snarebear Near Entrance",
+    "CCW Token - Spring Thorn Field Front Of Mumbos Skull",
+    "CCW Token - Spring Top Of Branch",
+    "CCW Token - Spring Top Of Beehive",
+    "CCW Token - Spring Nabnuts House",
+    "CCW Jiggy - Top Room",
+    "CCW Jiggy - Tree Top",
+    "CCW Token - Spring Front Of Eyrie",
+    "CCW Token - Spring Unfinished Wood Treehouse",
+    "CCW Jiggy - Summer Leaf Jumps",
+    "CCW Token - Summer Big Flower Field",
+    "CCW Token - Summer Entrance Gnawtys House",
+    "CCW Token - Summer Floating Above Big Clucker",
+    "CCW Token - Summer Snarebear Near Thorn Field",
+    "CCW Token - Summer Top Of Branch",
+    "CCW Jiggy - Zubbas",
+    "CCW Token - Summer Inside Mumbos Skull",
+    "CCW Jiggy - House",
+    "CCW Token - Summer Platforms Before Eyries Nest",
+    "CCW Honeycomb - Gnawtys",
+    "CCW Token - Winter Big Flower",
+    "CCW Token - Winter Broken Beehive",
+    "CCW Token - Winter Frozen River Near Flight Pad",
+    "CCW Token - Winter Sir Slush Between Big Flower And Mumbos Skull",
+    "CCW Honeycomb - Nabnuts",
+    "CCW Jiggy - Eyrie",
+    "CCW Token - Winter Walkway Front Of Nabnuts House",
+    "FP Jiggy - Jinjo",
+    "FP Jiggy - Sled To Boggy",
+    "FP Token - Inside Boggys Igloo",
+    "FP Jiggy - Igloo",
+    "FP Honeycomb - Wozzas Cave",
+    "FP Honeycomb - Under Sir Slush",
+    "FP Jiggy - Boggy Race 1",
+    "FP Jiggy - Boggy Race 2",
+    "FP Jiggy - Snowmans Buttons",
+    "FP Jiggy - Wozza",
+    "FP Molehill - Beak Bomb",
+    "FP Token - Potted Tree",
+    "FP Token - Present Stack",
+    "FP Token - Sir Slush Near Race Start",
+    "FP Token - Sir Slush Near Race Finish",
+    "FP Token - Snowman Left Foot",
+    "FP Token - Snowman Right Foot",
+    "FP Token - Village Chimney",
+    "FP Token - Water Behind Snowman",
+    "FP Jiggy - Beat All Sir Slush",
+    "FP Jiggy - Snowmans Pipe",
+    "FP Token - Sled To Boggy",
+    "FP Jiggy - Inside The Tree",
+    "GV Honeycomb - Gobi",
+    "GV Jiggy - Gobi 2",
+    "GV Jiggy - Jinjo",
+    "GV Token - Bottom Of Moat",
+    "GV Jiggy - Matching Game",
+    "GV Token - Inside Memory Game Room",
+    "GV Jiggy - Maze",
+    "GV Token - Behind Sandybutts Sarcophagus",
+    "GV Jiggy - Histup",
+    "GV Token - Next To Rubee",
+    "GV Jiggy - Shyinx",
+    "GV Token - Inside Jinxy",
+    "GV Jiggy - Water Pyramid",
+    "GV Token - Inside Water Pyramid",
+    "GV Honeycomb - Cactus",
+    "GV Jiggy - Ancient Ones",
+    "GV Jiggy - Gobi 1",
+    "GV Jiggy - Grabba",
+    "GV Molehill - Turbo Talon",
+    "GV Token - Front Of Star Door",
+    "GV Token - Sand Right Of Jinxy",
+    "GV Token - Top Of Jinxys Nose",
+    "GV Token - Top Of Water Pyramid",
+    "GL Token - CCW Jiggy Podium",
+    "GL Jiggy - Witch Switch Bubblegloop Swamp",
+    "GL Jiggy - Witch Switch Rusty Bucket Bay",
+    "GL Token - Above Note Door Water Area",
+    "GL Jiggy - Lobby",
+    "GL Jiggy - Witch Switch Mumbos Mountain",
+    "GL Token - Above CC Entrance",
+    "GL Jiggy - Witch Switch Click Clock Wood",
+    "GL Jiggy - Witch Switch Freezeezy Peak",
+    "GL Jiggy - Witch Switch Mad Monster Mansion",
+    "GL Token - Advent Top Window",
+    "GL Jiggy - Witch Switch Gobis Valley",
+    "GL Token - Behind Sarcophagus",
+    "GL Token - Underwater RBB Entrance Area",
+    "GL Jiggy - Witch Switch Treasure Trove Cove",
+    "GL Token - Top Of Pipe In Orange Cauldron Room",
+    "GL Token - Whipcrack Near MMM Jiggy Podium",
+    "GL Jiggy - Witch Switch Clankers Cavern",
+    "GL Token - Behind Purple Cauldron",
+    "GL Token - Behind Mumbo In Crypt",
+    "MMM Jiggy - Clocktower Top",
+    "MMM Jiggy - Cemetary Pots",
+    "MMM Token - Behind Church",
+    "MMM Token - Alcove Clock Tower",
+    "MMM Token - Top Of Stool Inside Church",
+    "MMM Jiggy - Motzand",
+    "MMM Honeycomb - Church Rafters",
+    "MMM Token - Top Of Rafter Inside Church",
+    "MMM Jiggy - Jinjo",
+    "MMM Token - Hidden Near Fountain",
+    "MMM Token - In The Maze",
+    "MMM Token - Inside Whipcrack In Fountain",
+    "MMM Token - Near Front Tumblars Shed",
+    "MMM Token - Next To Maze Hedge Ramp",
+    "MMM Token - Top Of Tumblars Shed",
+    "MMM Jiggy - Barrel Interior",
+    "MMM Token - In Loggos Room",
+    "MMM Token - Inside Bedroom",
+    "MMM Jiggy - Cellar",
+    "MMM Token - Inside Barrel In Cellar",
+    "MMM Jiggy - Mansion Table",
+    "MMM Token - In Chimney Inside Dining Room",
+    "MMM Jiggy - Inside Loggo",
+    "MMM Token - Inside Loggo",
+    "MMM Jiggy - Tumblars Puzzle",
+    "MMM Jiggy - Inside The Wells Bucket",
+    "MMM Token - Inside Well",
+    "MMM Honeycomb - Beneath The Floorboards",
+    "MM Honeycomb - Hill",
+    "MM Honeycomb - Juju",
+    "MM Jiggy - Chimpy",
+    "MM Jiggy - Conga",
+    "MM Jiggy - Hill",
+    "MM Jiggy - Huts",
+    "MM Jiggy - Jinjo",
+    "MM Jiggy - Juju",
+    "MM Jiggy - Mumbos Skull",
+    "MM Jiggy - Orange Pads",
+    "MM Jiggy - Ruins",
+    "MM Molehill - Beak Buster",
+    "MM Molehill - Talon Trot",
+    "MM Molehill - Use Eggs",
+    "MM Token - Behind Pink Jinjo",
+    "MM Token - Behind Ruins",
+    "MM Token - Stump Near Conga",
+    "MM Token - Under Ramp To Mumbos Skull",
+    "MM Token - Inside Tickers Tower",
+    "MM Jiggy - Tickers Tower",
+    "RBB Jiggy - Crane Cage",
+    "RBB Jiggy - Funnel",
+    "RBB Jiggy - Jinjo",
+    "RBB Jiggy - Propellor",
+    "RBB Jiggy - Snorkel",
+    "RBB Jiggy - Whistle",
+    "RBB Token - Toxic Waste Pond",
+    "RBB Token - On Life Boat",
+    "RBB Token - Ships Prow",
+    "RBB Token - Under Chompa In Witch Switch Tower",
+    "RBB Token - Top Of Ships Chimney",
+    "RBB Token - Front Of Chompa Left Of Ship",
+    "RBB Honeycomb - Boat House",
+    "RBB Jiggy - Boss Boom Box",
+    "RBB Token - Top Of Bunk In Cabin",
+    "RBB Jiggy - Captains Cabin",
+    "RBB Honeycomb - Engine Room",
+    "RBB Jiggy - Engine Room",
+    "RBB Token - Engine Room Left Pipe",
+    "RBB Token - Engine Room Right Pipe",
+    "RBB Token - Engine Room Spinning Platform",
+    "RBB Token - Inside Kitchen",
+    "RBB Token - Inside Navigation Room",
+    "RBB Token - Under Chompa Inside First Blue Container",
+    "RBB Token - Top Of Box Inside Second Blue Container",
+    "RBB Token - Top Of Box Inside Tnt Room",
+    "RBB Jiggy - Warehouse",
+    "SM Honeycomb - Colliwobble",
+    "SM Honeycomb - Quarries",
+    "SM Honeycomb - Stump",
+    "SM Honeycomb - Tree",
+    "SM Honeycomb - Underwater",
+    "SM Honeycomb - Waterfall",
+    "TTC Honeycomb - Floating Box",
+    "TTC Honeycomb - Underwater",
+    "TTC Jiggy - Alcove1",
+    "TTC Jiggy - Alcove2",
+    "TTC Jiggy - Blubber",
+    "TTC Jiggy - Jinjo",
+    "TTC Jiggy - Lockup",
+    "TTC Jiggy - Pool",
+    "TTC Jiggy - Red X",
+    "TTC Molehill - Shock Jump",
+    "TTC Molehill - Flight",
+    "TTC Token - Behind Pillar Underwater",
+    "TTC Token - Behind Nipper",
+    "TTC Token - Floating Above Shockjump Pad",
+    "TTC Token - Inside Lockup 1",
+    "TTC Token - Inside Lockup 2",
+    "TTC Token - On Floating Box",
+    "TTC Token - Pond Bottom",
+    "TTC Token - Salty Hippo Mast",
+    "TTC Jiggy - Nipper",
+    "TTC Jiggy - Sandcastle",
+    "TTC Token - Inside Salty Hippo",
+    "TTC Token - Behind Lighthouse Door",
+    "TTC Jiggy - Lighthouse",
+};
+
+const char* const bkr_region_names[BKR_REGION_COUNT] = {
+    "BUBBLEGLOOP_SWAMP",
+    "BUBBLEGLOOP_SWAMP_INTERIOR_MR_VILES",
+    "BUBBLEGLOOP_SWAMP_INTERIOR_MUMBOS_SKULL",
+    "BUBBLEGLOOP_SWAMP_INTERIOR_TANKTUP",
+    "CLANKERS_CAVERN_ENTRANCE",
+    "CLANKERS_CAVERN_ENTRANCE_UPPER",
+    "CLANKERS_CAVERN_ENTRANCE_UNDERWATER",
+    "CLANKERS_CAVERN_INTERIOR_CLANKER",
+    "CLANKERS_CAVERN_INTERIOR_CLANKER_FAST_SAWBLADE",
+    "CLANKERS_CAVERN_INTERIOR_CLANKER_SLOW_SAWBLADE",
+    "CLANKERS_CAVERN_NEAR_CLANKER",
+    "CLANKERS_CAVERN_NEAR_CLANKER_UPPER",
+    "CLANKERS_CAVERN_UNDERWATER_LOCK",
+    "CLICK_CLOCK_WOOD_AUTUMN",
+    "CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_BEEHIVE",
+    "CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_MUMBOS_SKULL",
+    "CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_NABNUTS_HOUSE",
+    "CLICK_CLOCK_WOOD_AUTUMN_INTERIOR_NABNUTS_WINDOW",
+    "CLICK_CLOCK_WOOD_AUTUMN_TOP_ROOM",
+    "CLICK_CLOCK_WOOD_AUTUMN_UPPER_TREE",
+    "CLICK_CLOCK_WOOD_ENTRANCE",
+    "CLICK_CLOCK_WOOD_SPRING",
+    "CLICK_CLOCK_WOOD_SPRING_INTERIOR_BEEHIVE",
+    "CLICK_CLOCK_WOOD_SPRING_INTERIOR_MUMBOS_SKULL",
+    "CLICK_CLOCK_WOOD_SPRING_INTERIOR_NABNUTS_HOUSE",
+    "CLICK_CLOCK_WOOD_SPRING_TOP_ROOM",
+    "CLICK_CLOCK_WOOD_SPRING_UPPER_TREE",
+    "CLICK_CLOCK_WOOD_SUMMER",
+    "CLICK_CLOCK_WOOD_SUMMER_INTERIOR_BEEHIVE",
+    "CLICK_CLOCK_WOOD_SUMMER_INTERIOR_MUMBOS_SKULL",
+    "CLICK_CLOCK_WOOD_SUMMER_INTERIOR_NABNUTS_HOUSE",
+    "CLICK_CLOCK_WOOD_SUMMER_TOP_ROOM",
+    "CLICK_CLOCK_WOOD_SUMMER_UPPER_TREE",
+    "CLICK_CLOCK_WOOD_WINTER",
+    "CLICK_CLOCK_WOOD_WINTER_INTERIOR_MUMBOS_SKULL",
+    "CLICK_CLOCK_WOOD_WINTER_INTERIOR_NABNUTS_HOUSE",
+    "CLICK_CLOCK_WOOD_WINTER_INTERIOR_NABNUTS_WINDOW",
+    "CLICK_CLOCK_WOOD_WINTER_INTERIOR_WINDOW_ABOVE_NABNUT",
+    "CLICK_CLOCK_WOOD_WINTER_TOP_ROOM",
+    "CLICK_CLOCK_WOOD_WINTER_UPPER_TREE",
+    "FREEZEEZY_PEAK_ENTRANCE",
+    "FREEZEEZY_PEAK_INTERIOR_BOGGYS_IGLOO",
+    "FREEZEEZY_PEAK_INTERIOR_MUMBOS_SKULL",
+    "FREEZEEZY_PEAK_INTERIOR_WOZZAS_CAVE",
+    "FREEZEEZY_PEAK_MAIN_LOWER",
+    "FREEZEEZY_PEAK_MAIN_UPPER",
+    "FREEZEEZY_PEAK_POTTED_TREE",
+    "GOBIS_VALLEY_ENTRANCE",
+    "GOBIS_VALLEY_INTERIOR_MATCH_GAME_PYRAMID",
+    "GOBIS_VALLEY_INTERIOR_MAZE_PYRAMID",
+    "GOBIS_VALLEY_INTERIOR_RUBEES_PYRAMID",
+    "GOBIS_VALLEY_INTERIOR_SPHYNX",
+    "GOBIS_VALLEY_INTERIOR_WATER_PYRAMID",
+    "GOBIS_VALLEY_SECRET_CHAMBER",
+    "GOBIS_VALLEY_UPPER_AREA",
+    "GRUNTILDAS_LAIR_BEFORE_NOTE_DOOR_180",
+    "GRUNTILDAS_LAIR_BEFORE_NOTE_DOOR_260",
+    "GRUNTILDAS_LAIR_BEFORE_NOTE_DOOR_640",
+    "GRUNTILDAS_LAIR_BOSS_GRUNTILDA",
+    "GRUNTILDAS_LAIR_FINAL_ROOM",
+    "GRUNTILDAS_LAIR_FURNACE_FUN",
+    "GRUNTILDAS_LAIR_LOBBY",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_BUBBLEGLOOP_SWAMP",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_CLANKERS_CAVERN",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_CLICK_CLOCK_WOOD",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_FREEZEEZY_PEAK",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_GOBIS_VALLEY",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_RUSTY_BUCKET_BAY",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_MAD_MONSTER_MANSION",
+    "GRUNTILDAS_LAIR_NEAR_ENTRANCE_TREASURE_TROVE_COVE",
+    "GRUNTILDAS_LAIR_NEAR_ORANGE_CAULDRON_1",
+    "GRUNTILDAS_LAIR_NEAR_PUZZLE_BOARD_GOBIS_VALLEY",
+    "GRUNTILDAS_LAIR_NEAR_PUZZLE_BOARD_MAD_MONSTER_MANSION",
+    "GRUNTILDAS_LAIR_NEAR_PUZZLE_BOARD_RUSTY_BUCKET_BAY",
+    "GRUNTILDAS_LAIR_PAST_NOTE_DOOR_50",
+    "GRUNTILDAS_LAIR_WATER_SWITCH_1_ROOM",
+    "MAD_MONSTER_MANSION_CHURCH_CLOCK_TOWER",
+    "MAD_MONSTER_MANSION_CHURCH_EXTERIOR",
+    "MAD_MONSTER_MANSION_CHURCH_INTERIOR",
+    "MAD_MONSTER_MANSION_CHURCH_INTERIOR_UPPER_ORGAN",
+    "MAD_MONSTER_MANSION_CHURCH_INTERIOR_RAFTERS",
+    "MAD_MONSTER_MANSION_CHURCH_INTERIOR_WINDOW",
+    "MAD_MONSTER_MANSION_ENTRANCE",
+    "MAD_MONSTER_MANSION_INTERIOR_BARREL",
+    "MAD_MONSTER_MANSION_INTERIOR_BATHROOM",
+    "MAD_MONSTER_MANSION_INTERIOR_BEDROOM",
+    "MAD_MONSTER_MANSION_INTERIOR_CELLAR",
+    "MAD_MONSTER_MANSION_INTERIOR_DINING_ROOM",
+    "MAD_MONSTER_MANSION_INTERIOR_INSIDE_LOGGO",
+    "MAD_MONSTER_MANSION_INTERIOR_MUMBOS_SKULL",
+    "MAD_MONSTER_MANSION_INTERIOR_TUMBLARS_SHED",
+    "MAD_MONSTER_MANSION_INTERIOR_WELL",
+    "MAD_MONSTER_MANSION_INTERIOR_WINDOW_BOTTOM_NORTH",
+    "MAD_MONSTER_MANSION_INTERIOR_WINDOW_BOTTOM_SOUTH",
+    "MAD_MONSTER_MANSION_INTERIOR_WINDOW_MIDDLE_WEST",
+    "MAD_MONSTER_MANSION_INTERIOR_WINDOW_TOP_ATTIC",
+    "MUMBOS_MOUNTAIN_ENTRANCE",
+    "MUMBOS_MOUNTAIN_INTERIOR_TICKERS_TOWER",
+    "MUMBOS_MOUNTAIN_INTERIOR_MUMBOS_SKULL",
+    "MUMBOS_MOUNTAIN_TICKERS_TOWER_TOP",
+    "RUSTY_BUCKET_BAY_ENTRANCE",
+    "RUSTY_BUCKET_BAY_INTERIOR_ANCHOR",
+    "RUSTY_BUCKET_BAY_INTERIOR_BOAT_HOUSE",
+    "RUSTY_BUCKET_BAY_INTERIOR_BOSS_BOOM_BOX_ROOM",
+    "RUSTY_BUCKET_BAY_INTERIOR_BUNK_CABIN",
+    "RUSTY_BUCKET_BAY_INTERIOR_CAPTAINS_CABIN",
+    "RUSTY_BUCKET_BAY_INTERIOR_ENGINE_ROOM_BEHIND_GLASS",
+    "RUSTY_BUCKET_BAY_INTERIOR_ENGINE_ROOM_MAIN",
+    "RUSTY_BUCKET_BAY_INTERIOR_KITCHEN",
+    "RUSTY_BUCKET_BAY_INTERIOR_NAVIGATION_ROOM",
+    "RUSTY_BUCKET_BAY_INTERIOR_SHIPPING_CONTAINER_FIRST",
+    "RUSTY_BUCKET_BAY_INTERIOR_SHIPPING_CONTAINER_SECOND",
+    "RUSTY_BUCKET_BAY_INTERIOR_SHIPPING_CONTAINER_THIRD",
+    "RUSTY_BUCKET_BAY_INTERIOR_TNT_ROOM",
+    "RUSTY_BUCKET_BAY_INTERIOR_WAREHOUSE_LOWER",
+    "RUSTY_BUCKET_BAY_INTERIOR_WAREHOUSE_UPPER",
+    "SPIRAL_MOUNTAIN_ENTRANCE",
+    "TREASURE_TROVE_COVE_ENTRANCE",
+    "TREASURE_TROVE_COVE_INTERIOR_NIPPER",
+    "TREASURE_TROVE_COVE_INTERIOR_SANDCASTLE",
+    "TREASURE_TROVE_COVE_INTERIOR_SHIP_LOWER",
+    "TREASURE_TROVE_COVE_INTERIOR_SHIP_UPPER",
+    "TREASURE_TROVE_COVE_LIGHTHOUSE_BASE",
+    "TREASURE_TROVE_COVE_LIGHTHOUSE_TOP",
+    "TREASURE_TROVE_COVE_SHARKFOOD_ISLAND",
+};
+
+const char* const bkr_event_names[BKR_EVENT_COUNT] = {
+    "CAULDRON_BLUE_1",
+    "CAULDRON_BLUE_2",
+    "CAULDRON_ORANGE_1",
+    "CAULDRON_ORANGE_2",
+    "CAULDRON_PURPLE_1",
+    "CAULDRON_PURPLE_2",
+    "CAULDRON_YELLOW_1",
+    "CAULDRON_YELLOW_2",
+    "DRAIN_WATER_PYRAMID",
+    "DRAIN_WATER_SANDCASTLE",
+    "GAME_COMPLETE",
+    "GNAWTYS_BOULDER",
+    "JINJO_BGS_BLUE",
+    "JINJO_BGS_GREEN",
+    "JINJO_BGS_ORANGE",
+    "JINJO_BGS_PINK",
+    "JINJO_BGS_YELLOW",
+    "JINJO_CCW_BLUE",
+    "JINJO_CCW_GREEN",
+    "JINJO_CCW_ORANGE",
+    "JINJO_CCW_PINK",
+    "JINJO_CCW_YELLOW",
+    "JINJO_CC_BLUE",
+    "JINJO_CC_GREEN",
+    "JINJO_CC_ORANGE",
+    "JINJO_CC_PINK",
+    "JINJO_CC_YELLOW",
+    "JINJO_FP_BLUE",
+    "JINJO_FP_GREEN",
+    "JINJO_FP_ORANGE",
+    "JINJO_FP_PINK",
+    "JINJO_FP_YELLOW",
+    "JINJO_GV_BLUE",
+    "JINJO_GV_GREEN",
+    "JINJO_GV_ORANGE",
+    "JINJO_GV_PINK",
+    "JINJO_GV_YELLOW",
+    "JINJO_MMM_BLUE",
+    "JINJO_MMM_GREEN",
+    "JINJO_MMM_ORANGE",
+    "JINJO_MMM_PINK",
+    "JINJO_MMM_YELLOW",
+    "JINJO_MM_BLUE",
+    "JINJO_MM_GREEN",
+    "JINJO_MM_ORANGE",
+    "JINJO_MM_PINK",
+    "JINJO_MM_YELLOW",
+    "JINJO_RBB_BLUE",
+    "JINJO_RBB_GREEN",
+    "JINJO_RBB_ORANGE",
+    "JINJO_RBB_PINK",
+    "JINJO_RBB_YELLOW",
+    "JINJO_TTC_BLUE",
+    "JINJO_TTC_GREEN",
+    "JINJO_TTC_ORANGE",
+    "JINJO_TTC_PINK",
+    "JINJO_TTC_YELLOW",
+    "NOTE_DOOR_180",
+    "NOTE_DOOR_260",
+    "NOTE_DOOR_350",
+    "NOTE_DOOR_450",
+    "NOTE_DOOR_50",
+    "NOTE_DOOR_640",
+    "NOTE_DOOR_765",
+    "NOTE_DOOR_810",
+    "NOTE_DOOR_828",
+    "NOTE_DOOR_846",
+    "NOTE_DOOR_864",
+    "NOTE_DOOR_882",
+    "PUZZLE_BOARD_BUBBLEGLOOP_SWAMP",
+    "PUZZLE_BOARD_CLANKERS_CAVERN",
+    "PUZZLE_BOARD_CLICK_CLOCK_WOOD",
+    "PUZZLE_BOARD_FREEZEEZY_PEAK",
+    "PUZZLE_BOARD_GOBIS_VALLEY",
+    "PUZZLE_BOARD_GRUNTILDA",
+    "PUZZLE_BOARD_MAD_MONSTER_MANSION",
+    "PUZZLE_BOARD_MUMBOS_MOUNTAIN",
+    "PUZZLE_BOARD_RUSTY_BUCKET_BAY",
+    "PUZZLE_BOARD_TREASURE_TROVE_COVE",
+    "TRIGGER_SWITCH_CCW_AUTUMN",
+    "TRIGGER_SWITCH_CCW_SPRING",
+    "TRIGGER_SWITCH_CCW_SUMMER",
+    "TRIGGER_SWITCH_CCW_WINTER",
+    "TRIGGER_SWITCH_GL_ABOVE_WATER_PIPE",
+    "TRIGGER_SWITCH_GL_BGS_PUZZLE_BOARD_GRATE",
+    "TRIGGER_SWITCH_GL_CCW_PUZZLE_BOARD_PLATFORM",
+    "TRIGGER_SWITCH_GL_FLIGHT_PAD",
+    "TRIGGER_SWITCH_GL_SHOCK_PAD",
+    "TRIGGER_SWITCH_GL_UNDERWATER_PIPES",
+    "TRIGGER_SWITCH_GL_WATER_LEVEL_1",
+    "TRIGGER_SWITCH_GL_WATER_LEVEL_2",
+    "TRIGGER_SWITCH_GL_WATER_LEVEL_3",
+    "TRIGGER_SWITCH_RBB_ANCHOR",
+    "TRIGGER_SWITCH_RBB_PROPELLOR_FIRST",
+    "TRIGGER_SWITCH_RBB_PROPELLOR_SECOND",
+    "WITCH_SWITCH_BUBBLEGLOOP_SWAMP",
+    "WITCH_SWITCH_CLANKERS_CAVERN",
+    "WITCH_SWITCH_CLICK_CLOCK_WOOD",
+    "WITCH_SWITCH_FREEZEEZY_PEAK",
+    "WITCH_SWITCH_GOBIS_VALLEY",
+    "WITCH_SWITCH_MAD_MONSTER_MANSION",
+    "WITCH_SWITCH_MUMBOS_MOUNTAIN",
+    "WITCH_SWITCH_RUSTY_BUCKET_BAY",
+    "WITCH_SWITCH_TREASURE_TROVE_COVE",
+};
+
+const bkr_u16 bkr_loc_by_jiggy[101] = {
+    0xFFFF, 0x00B2, 0x00BF, 0x00B4, 0x00B3, 0x00B1, 0x00B6, 0x00B0, 0x00B5, 0x00AE, 0x00AF, 0x00E6, 0x00F8, 0x00E3, 0x00E4, 0x00E8,
+    0x00F5, 0x00E9, 0x00F4, 0x00E7, 0x00E5, 0x0017, 0x0024, 0x0021, 0x0020, 0x0023, 0x0022, 0x001A, 0x0019, 0x001E, 0x001C, 0x0004,
+    0x0001, 0x0006, 0x0000, 0x0003, 0x0002, 0x0005, 0x0007, 0x0015, 0x0010, 0x004E, 0x004F, 0x0062, 0x0055, 0x0056, 0x0051, 0x0064,
+    0x0054, 0x0061, 0x0057, 0x0080, 0x0081, 0x008D, 0x008A, 0x007D, 0x0084, 0x0085, 0x0087, 0x007E, 0x0083, 0x0067, 0x0076, 0x006F,
+    0x0069, 0x006B, 0x0071, 0x006D, 0x0075, 0x0066, 0x0074, 0x0031, 0x0044, 0x004C, 0x002F, 0x002A, 0x0042, 0x0029, 0x003C, 0x0039,
+    0x0038, 0x00C2, 0x00DA, 0x00C4, 0x00C5, 0x00C1, 0x00CD, 0x00C3, 0x00CF, 0x00C0, 0x00D1, 0x0098, 0x00A9, 0x00A4, 0x00A2, 0x0090,
+    0x0095, 0x009F, 0x00A8, 0x0091, 0x00A6,
+};
+
+const bkr_u16 bkr_loc_by_honeycomb[25] = {
+    0xFFFF, 0x00AC, 0x00AD, 0x00E2, 0x00E1, 0x001F, 0x0027, 0x0012, 0x0014, 0x0052, 0x0053, 0x0073, 0x0065, 0x0046, 0x004B, 0x00CC,
+    0x00D0, 0x0096, 0x00AB, 0x00DD, 0x00E0, 0x00DF, 0x00DE, 0x00DB, 0x00DC,
+};
+
+const bkr_u16 bkr_loc_by_token[128] = {
+    0xFFFF, 0x00BC, 0x00BB, 0x00BD, 0x00BA, 0x00BE, 0x00F6, 0x00EF, 0x00F0, 0x00F3, 0x00F7, 0x00F1, 0x00EC, 0x00F2, 0x00EE, 0x00ED,
+    0x0025, 0x0018, 0x0026, 0x0028, 0x001B, 0x000E, 0x000F, 0x000D, 0x000B, 0x000C, 0x000A, 0x0009, 0x0016, 0x0011, 0x0013, 0x005D,
+    0x005E, 0x005A, 0x005F, 0x005B, 0x005C, 0x0059, 0x0063, 0x0060, 0x0050, 0x007A, 0x0079, 0x0068, 0x007B, 0x0078, 0x006A, 0x006C,
+    0x0072, 0x006E, 0x0070, 0x0099, 0x009C, 0x0093, 0x009D, 0x009A, 0x0092, 0x009B, 0x0097, 0x0094, 0x009E, 0x00A3, 0x00A5, 0x00AA,
+    0x00A1, 0x00A0, 0x00CA, 0x00C8, 0x00C7, 0x00CB, 0x00C6, 0x00C9, 0x00D7, 0x00D8, 0x00CE, 0x00D6, 0x00D5, 0x00D2, 0x00D3, 0x00D4,
+    0x00D9, 0x008E, 0x007C, 0x008B, 0x0082, 0x0088, 0x0086, 0x008F, 0x007F, 0x0089, 0x008C, 0x003B, 0x0035, 0x0034, 0x003A, 0x0032,
+    0x0033, 0x0036, 0x0037, 0x0045, 0x003D, 0x0040, 0x0041, 0x003E, 0x003F, 0x0043, 0x002B, 0x002D, 0x0030, 0x002C, 0x002E, 0x0047,
+    0x0049, 0x0048, 0x004D, 0x004A, 0x00A7, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF,
+};
+
+const bkr_u16 bkr_loc_by_mole[10] = {
+    0x0058, 0x00B9, 0x00B7, 0x00B8, 0x00EA, 0x00EB, 0x001D, 0x0008, 0x0077, 0xFFFF,
+};

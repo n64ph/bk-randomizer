@@ -1,0 +1,18 @@
+/* Arquivo gerado por tools/compile_logic.py — NÃO EDITE À MÃO. */
+#ifndef BKR_LOGIC_DATA_H
+#define BKR_LOGIC_DATA_H
+
+#define BKR_LOGIC_SOURCE_COMMIT "c09a1f11041f50c2fd86d8aa60f8ee15a3ca13fd"
+#define BKR_REGION_COUNT 125
+#define BKR_LOCATION_COUNT 249
+#define BKR_EXIT_COUNT 243
+#define BKR_EVENT_COUNT 104
+#define BKR_EVENT_DEF_COUNT 105
+#define BKR_NOTE_GROUP_COUNT 118
+#define BKR_RULE_CODE_SIZE 1769
+#define BKR_START_REGION 116
+#define BKR_GOAL_EVENT 10
+#define BKR_STARTING_MOVES 0x00009DB9u
+#define BKR_LOGIC_DATA_HASH 0x5C82A342u
+
+#endif
