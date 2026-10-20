@@ -1,0 +1,6 @@
+# Fim de linha LF em todos os arquivos de texto, em qualquer sistema: os hashes
+# dos arquivos gerados e os scripts do Git Bash dependem disso.
+* text=auto eol=lf
+*.png binary
+*.nrm binary
+*.zip binary

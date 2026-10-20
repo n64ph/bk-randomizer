@@ -1,3 +1,4 @@
+# Vindos do BKRecompModTemplate
 *.d
 *.o
 *.elf
@@ -11,3 +12,10 @@
 patches.map
 build/
 .vscode/settings.json
+
+# Do randomizer
+*.nrm
+__pycache__/
+*.pyc
+spoiler*.txt
+dist/
